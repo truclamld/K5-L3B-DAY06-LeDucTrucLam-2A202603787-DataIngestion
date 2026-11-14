@@ -56,3 +56,14 @@ Các nhãn dưới đây được tạo với AI hỗ trợ bằng cách đọc 
 - **Metadata và filter mới được kiểm tra ở quy mô nhỏ:** audit 45 hit và ba truy vấn có filter cho thấy dữ liệu trong mẫu là đúng, nhưng chưa kiểm chứng toàn bộ corpus hoặc khả năng phân biệt nhiều nguồn và phiên bản. Khi mở rộng, nên tự động kiểm tra metadata trên toàn bộ chunk, thêm ca kiểm thử trùng tên chương/khác phiên bản, và xác nhận filter không loại nhầm bằng chứng phù hợp.
 - **Benchmark chưa phản ánh đầy đủ chi phí vận hành:** thời gian được ghi nhận hiện chỉ là thời gian embedding tài liệu trong một lần chạy, không gồm trích xuất, chunking, lưu dữ liệu hay truy vấn. C dùng lại embedding của B nên số 0 giây không thể so sánh như một lần ingest độc lập. Cần đo riêng từng giai đoạn và truy vấn, chạy lặp lại trong điều kiện nhất quán, báo cáo độ trễ cùng tài nguyên/chi phí, đồng thời phân biệt rõ thời gian cache và thời gian chạy mới.
 - **Khả năng tái lập thí nghiệm còn hạn chế:** các trace và summary đã lưu giúp kiểm tra kết quả, nhưng nhật ký `artifacts/experiment_log.csv` chưa ghi đầy đủ tham số, giả thuyết và kết quả A/B/C. Nếu làm lại, nên hoàn thiện nhật ký và lưu cùng lần chạy cấu hình, phiên bản dữ liệu/mã nguồn, câu hỏi, metric và môi trường để người khác có thể tái lập phép so sánh.
+
+## Sử dụng AI
+
+- **Công cụ đã sử dụng:** OpenAI Codex (model Luna 6 Medium)
+
+- **Quá trình sử dụng:**
+    - Giải thích về đề bài và các yêu cầu đề bài và nộp bài
+    - Kiểm tra tài liệu, bao gồm quyền tái sử dụng và đề xuất cách phân chia dữ liệu trong tài liệu
+    - Kiểm tra và chỉnh sửa 1 phần các câu hỏi benchmark
+    - Hỗ trợ viết code pipeline trong `starter/src/`
+    - Hỗ trợ đánh giá và chấm điểm các cấu hình benchmark; học viên có rà soát, kiểm tra và chỉnh sửa một phần cách trình bày, còn nội dung chấm được chấp nhận và không có sửa đổi thêm.
