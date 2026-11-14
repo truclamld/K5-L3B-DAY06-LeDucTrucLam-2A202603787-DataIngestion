@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,1000,150,"source,page,physical_page,section,version,title,language",none,"OpenAI text-embedding-3-small (1536d)","Cấu hình baseline dùng chunk kích thước cố định; so sánh với cách chia theo đoạn về khả năng truy xuất, số lượng chunk và thời gian embedding.",2/15,4/15,0/5,3/5,"270 chunks; thời gian embedding 6.989 giây; tìm kiếm cosine; không dùng bộ lọc metadata."
+B,paragraph,1200,0,"source,page,physical_page,section,version,title,language",none,"OpenAI text-embedding-3-small (1536d)","Chunk theo đoạn, giới hạn 1200 ký tự, được kỳ vọng giữ ngữ cảnh tốt hơn và giảm số lượng chunk so với cấu hình A.",2/15,3/15,2/5,3/5,"218 chunks; thời gian embedding 4.154 giây; tìm kiếm cosine; không dùng bộ lọc metadata."
+C,paragraph_filter,1200,0,"source,page,physical_page,section,version,title,language","section (apply only when query supplies a section)","OpenAI text-embedding-3-small (1536d)","Giữ nguyên chunk như cấu hình B; bộ lọc section được kỳ vọng cải thiện thứ hạng truy xuất cho câu hỏi có cung cấp section, đồng thời không ảnh hưởng các câu hỏi không có filter.",2/15,3/15,3/5,3/5,"218 chunks; dùng lại embedding của B (không tạo embedding mới cho tài liệu, 0.000 giây); tìm kiếm cosine; filter tuân thủ ở 3/3 câu hỏi có filter."
