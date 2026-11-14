@@ -1,13 +1,13 @@
 {
   "A_fixed": {
     "chunk_count": 270,
-    "embedding_seconds": 6.293,
+    "embedding_seconds": 6.989,
     "model": "text-embedding-3-small",
     "dimensions": 1536
   },
   "B_paragraph": {
     "chunk_count": 218,
-    "embedding_seconds": 3.244,
+    "embedding_seconds": 4.154,
     "model": "text-embedding-3-small",
     "dimensions": 1536
   },

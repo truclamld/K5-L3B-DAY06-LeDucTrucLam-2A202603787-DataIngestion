@@ -1,0 +1,340 @@
+{
+  "assessment_method": "Đánh giá sơ bộ có AI hỗ trợ theo rubric GUIDE.md; chấm chunk chứa đoạn nội dung đầu tiên trên 10 trang nội dung đầu tiên của manifest. Cùng vị trí được dùng cho cả ba cấu hình. Tác giả đã rà soát và chấp nhận nhãn; đây là đánh giá có AI hỗ trợ, không phải audit độc lập. Vị trí từng mẫu được định danh bằng trang PDF vật lý, offset ký tự trong data/corpus.jsonl và excerpt mở đầu để có thể tìm lại chính xác.",
+  "scale": {
+    "0": "ý bị cắt hoặc thiếu chủ thể, khó hiểu",
+    "1": "hiểu một phần nhưng thiếu ngữ cảnh",
+    "2": "tự hiểu được và giữ trọn ý"
+  },
+  "assessments": [
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 9,
+      "location": "PDF trang vật lý 9, offset 35 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'If you do much work on computers'",
+      "chunk_id": "python-tutorial-3-7-0:9:fixed:0",
+      "score": 2,
+      "reason": "Chunk giữ trọn đoạn mở đầu nêu các việc có thể tự động hóa và ví dụ; ý tự hiểu được.",
+      "source_char_start": 35,
+      "source_excerpt": "If you do much work on computers, eventually you find that there’s some task you’d like to automate. For\nexample, you may wish to perform a search-and-replace over a large number o"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 10,
+      "location": "PDF trang vật lý 10, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'are really hooked, you can link the Python interpreter'",
+      "chunk_id": "python-tutorial-3-7-0:10:fixed:0",
+      "score": 1,
+      "reason": "Đoạn đầu tiếp nối câu từ trang 9 và bắt đầu giữa mạch văn; cần ngữ cảnh trang trước.",
+      "source_char_start": 31,
+      "source_excerpt": "are really hooked, you can link the Python interpreter into an application written in C and use it as an\nextension or command language for that application.\nBy the way, the languag"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 11,
+      "location": "PDF trang vật lý 11, offset 70 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'The Python interpreter is usually installed'",
+      "chunk_id": "python-tutorial-3-7-0:11:fixed:0",
+      "score": 2,
+      "reason": "Đoạn mở đầu về cách gọi Python interpreter kèm lệnh và điều kiện cài đặt, đủ chủ thể và ý.",
+      "source_char_start": 70,
+      "source_excerpt": "The Python interpreter is usually installed as /usr/local/bin/python3.7 on those machines where it is\navailable; putting /usr/local/bin in your Unix shell’s search path makes it po"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 12,
+      "location": "PDF trang vật lý 12, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'All command line options are described'",
+      "chunk_id": "python-tutorial-3-7-0:12:fixed:0",
+      "score": 2,
+      "reason": "Đoạn về command-line options và argument passing có chủ đề rõ, diễn giải được độc lập.",
+      "source_char_start": 31,
+      "source_excerpt": "All command line options are described in using-on-general.\n2.1.1 Argument Passing\nWhen known to the interpreter, the script name and additional arguments thereafter are turned int"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 13,
+      "location": "PDF trang vật lý 13, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'For example, to declare that Windows-1252 encoding'",
+      "chunk_id": "python-tutorial-3-7-0:13:fixed:0",
+      "score": 2,
+      "reason": "Đoạn mã khai báo Windows-1252 và giải thích vị trí dòng khai báo tạo thành ví dụ hoàn chỉnh.",
+      "source_char_start": 31,
+      "source_excerpt": "For example, to declare that Windows-1252 encoding is to be used, the first line of your source code file\nshould be:\n# -*- coding: cp1252 -*-\nOne exception to the first line rule i"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 15,
+      "location": "PDF trang vật lý 15, offset 49 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'In the following examples, input and output are distinguished'",
+      "chunk_id": "python-tutorial-3-7-0:15:fixed:0",
+      "score": 2,
+      "reason": "Đoạn mở chương giải thích prompt, input/output và cách lặp lại ví dụ, đủ ngữ cảnh.",
+      "source_char_start": 49,
+      "source_excerpt": "In the following examples, input and output are distinguished by the presence or absence of prompts (>>>\nand…): to repeat the example, you must type everything after the prompt, wh"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 16,
+      "location": "PDF trang vật lý 16, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'Division (/) always returns a float'",
+      "chunk_id": "python-tutorial-3-7-0:16:fixed:0",
+      "score": 2,
+      "reason": "Đoạn về phép chia /, // và % nêu rõ hành vi và ví dụ; thông điệp chính trọn vẹn.",
+      "source_char_start": 31,
+      "source_excerpt": "Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional\nresult) you can use the // operator; to calculate the remainder you c"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 17,
+      "location": "PDF trang vật lý 17, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'In addition to int and float'",
+      "chunk_id": "python-tutorial-3-7-0:17:fixed:0",
+      "score": 2,
+      "reason": "Đoạn phân biệt int/float với Decimal, Fraction và complex có chủ thể, nội dung đầy đủ.",
+      "source_char_start": 31,
+      "source_excerpt": "In addition to int and float, Python supports other types of numbers, such as Decimal and Fraction.\nPython also has built-in support for complex numbers, and uses the j or J suﬃx t"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 18,
+      "location": "PDF trang vật lý 18, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'print(\"\"\"\\\\'",
+      "chunk_id": "python-tutorial-3-7-0:18:fixed:0",
+      "score": 2,
+      "reason": "Ví dụ chuỗi nhiều dòng có code và output được giải thích, đọc được như một đơn vị.",
+      "source_char_start": 31,
+      "source_excerpt": "print(\"\"\"\\\nUsage: thingy [OPTIONS]\n-h Display this usage message\n-H hostname Hostname to connect to\n\"\"\")\nproduces the following output (note that the initial newline is not include"
+    },
+    {
+      "strategy": "A_fixed",
+      "source": "python-tutorial-3-7-0",
+      "page": 19,
+      "location": "PDF trang vật lý 19, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: '>>> word[-1] # last character'",
+      "chunk_id": "python-tutorial-3-7-0:19:fixed:0",
+      "score": 1,
+      "reason": "Chunk chứa phần tiếp nối ví dụ word/index; thiếu phần khởi tạo word và bắt đầu từ output nên chưa tự đủ ngữ cảnh.",
+      "source_char_start": 31,
+      "source_excerpt": ">>> word[-1] # last character\n'n'\n'o'\n>>> word[-6]\n'P'\n>>> word[-2] # second-last character\nNote that since -0 is the same as 0, negative indices start from -1.\nIn addition to inde"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 9,
+      "location": "PDF trang vật lý 9, offset 35 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'If you do much work on computers'",
+      "chunk_id": "python-tutorial-3-7-0:9:paragraph:0",
+      "score": 2,
+      "reason": "Chunk giữ trọn đoạn mở đầu nêu các việc có thể tự động hóa và ví dụ; ý tự hiểu được.",
+      "source_char_start": 35,
+      "source_excerpt": "If you do much work on computers, eventually you find that there’s some task you’d like to automate. For\nexample, you may wish to perform a search-and-replace over a large number o"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 10,
+      "location": "PDF trang vật lý 10, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'are really hooked, you can link the Python interpreter'",
+      "chunk_id": "python-tutorial-3-7-0:10:paragraph:0",
+      "score": 1,
+      "reason": "Đoạn đầu tiếp nối câu từ trang 9 và bắt đầu giữa mạch văn; cần ngữ cảnh trang trước.",
+      "source_char_start": 31,
+      "source_excerpt": "are really hooked, you can link the Python interpreter into an application written in C and use it as an\nextension or command language for that application.\nBy the way, the languag"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 11,
+      "location": "PDF trang vật lý 11, offset 70 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'The Python interpreter is usually installed'",
+      "chunk_id": "python-tutorial-3-7-0:11:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn mở đầu về cách gọi Python interpreter kèm lệnh và điều kiện cài đặt, đủ chủ thể và ý.",
+      "source_char_start": 70,
+      "source_excerpt": "The Python interpreter is usually installed as /usr/local/bin/python3.7 on those machines where it is\navailable; putting /usr/local/bin in your Unix shell’s search path makes it po"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 12,
+      "location": "PDF trang vật lý 12, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'All command line options are described'",
+      "chunk_id": "python-tutorial-3-7-0:12:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn về command-line options và argument passing có chủ đề rõ, diễn giải được độc lập.",
+      "source_char_start": 31,
+      "source_excerpt": "All command line options are described in using-on-general.\n2.1.1 Argument Passing\nWhen known to the interpreter, the script name and additional arguments thereafter are turned int"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 13,
+      "location": "PDF trang vật lý 13, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'For example, to declare that Windows-1252 encoding'",
+      "chunk_id": "python-tutorial-3-7-0:13:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn mã khai báo Windows-1252 và giải thích vị trí dòng khai báo tạo thành ví dụ hoàn chỉnh.",
+      "source_char_start": 31,
+      "source_excerpt": "For example, to declare that Windows-1252 encoding is to be used, the first line of your source code file\nshould be:\n# -*- coding: cp1252 -*-\nOne exception to the first line rule i"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 15,
+      "location": "PDF trang vật lý 15, offset 49 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'In the following examples, input and output are distinguished'",
+      "chunk_id": "python-tutorial-3-7-0:15:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn mở chương giải thích prompt, input/output và cách lặp lại ví dụ, đủ ngữ cảnh.",
+      "source_char_start": 49,
+      "source_excerpt": "In the following examples, input and output are distinguished by the presence or absence of prompts (>>>\nand…): to repeat the example, you must type everything after the prompt, wh"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 16,
+      "location": "PDF trang vật lý 16, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'Division (/) always returns a float'",
+      "chunk_id": "python-tutorial-3-7-0:16:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn về phép chia /, // và % nêu rõ hành vi và ví dụ; thông điệp chính trọn vẹn.",
+      "source_char_start": 31,
+      "source_excerpt": "Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional\nresult) you can use the // operator; to calculate the remainder you c"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 17,
+      "location": "PDF trang vật lý 17, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'In addition to int and float'",
+      "chunk_id": "python-tutorial-3-7-0:17:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn phân biệt int/float với Decimal, Fraction và complex có chủ thể, nội dung đầy đủ.",
+      "source_char_start": 31,
+      "source_excerpt": "In addition to int and float, Python supports other types of numbers, such as Decimal and Fraction.\nPython also has built-in support for complex numbers, and uses the j or J suﬃx t"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 18,
+      "location": "PDF trang vật lý 18, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'print(\"\"\"\\\\'",
+      "chunk_id": "python-tutorial-3-7-0:18:paragraph:0",
+      "score": 2,
+      "reason": "Ví dụ chuỗi nhiều dòng có code và output được giải thích, đọc được như một đơn vị.",
+      "source_char_start": 31,
+      "source_excerpt": "print(\"\"\"\\\nUsage: thingy [OPTIONS]\n-h Display this usage message\n-H hostname Hostname to connect to\n\"\"\")\nproduces the following output (note that the initial newline is not include"
+    },
+    {
+      "strategy": "B_paragraph",
+      "source": "python-tutorial-3-7-0",
+      "page": 19,
+      "location": "PDF trang vật lý 19, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: '>>> word[-1] # last character'",
+      "chunk_id": "python-tutorial-3-7-0:19:paragraph:0",
+      "score": 1,
+      "reason": "Chunk chứa phần tiếp nối ví dụ word/index; thiếu phần khởi tạo word và bắt đầu từ output nên chưa tự đủ ngữ cảnh.",
+      "source_char_start": 31,
+      "source_excerpt": ">>> word[-1] # last character\n'n'\n'o'\n>>> word[-6]\n'P'\n>>> word[-2] # second-last character\nNote that since -0 is the same as 0, negative indices start from -1.\nIn addition to inde"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 9,
+      "location": "PDF trang vật lý 9, offset 35 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'If you do much work on computers'",
+      "chunk_id": "python-tutorial-3-7-0:9:paragraph:0",
+      "score": 2,
+      "reason": "Chunk giữ trọn đoạn mở đầu nêu các việc có thể tự động hóa và ví dụ; ý tự hiểu được.",
+      "source_char_start": 35,
+      "source_excerpt": "If you do much work on computers, eventually you find that there’s some task you’d like to automate. For\nexample, you may wish to perform a search-and-replace over a large number o"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 10,
+      "location": "PDF trang vật lý 10, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'are really hooked, you can link the Python interpreter'",
+      "chunk_id": "python-tutorial-3-7-0:10:paragraph:0",
+      "score": 1,
+      "reason": "Đoạn đầu tiếp nối câu từ trang 9 và bắt đầu giữa mạch văn; cần ngữ cảnh trang trước.",
+      "source_char_start": 31,
+      "source_excerpt": "are really hooked, you can link the Python interpreter into an application written in C and use it as an\nextension or command language for that application.\nBy the way, the languag"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 11,
+      "location": "PDF trang vật lý 11, offset 70 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'The Python interpreter is usually installed'",
+      "chunk_id": "python-tutorial-3-7-0:11:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn mở đầu về cách gọi Python interpreter kèm lệnh và điều kiện cài đặt, đủ chủ thể và ý.",
+      "source_char_start": 70,
+      "source_excerpt": "The Python interpreter is usually installed as /usr/local/bin/python3.7 on those machines where it is\navailable; putting /usr/local/bin in your Unix shell’s search path makes it po"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 12,
+      "location": "PDF trang vật lý 12, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'All command line options are described'",
+      "chunk_id": "python-tutorial-3-7-0:12:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn về command-line options và argument passing có chủ đề rõ, diễn giải được độc lập.",
+      "source_char_start": 31,
+      "source_excerpt": "All command line options are described in using-on-general.\n2.1.1 Argument Passing\nWhen known to the interpreter, the script name and additional arguments thereafter are turned int"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 13,
+      "location": "PDF trang vật lý 13, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'For example, to declare that Windows-1252 encoding'",
+      "chunk_id": "python-tutorial-3-7-0:13:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn mã khai báo Windows-1252 và giải thích vị trí dòng khai báo tạo thành ví dụ hoàn chỉnh.",
+      "source_char_start": 31,
+      "source_excerpt": "For example, to declare that Windows-1252 encoding is to be used, the first line of your source code file\nshould be:\n# -*- coding: cp1252 -*-\nOne exception to the first line rule i"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 15,
+      "location": "PDF trang vật lý 15, offset 49 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'In the following examples, input and output are distinguished'",
+      "chunk_id": "python-tutorial-3-7-0:15:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn mở chương giải thích prompt, input/output và cách lặp lại ví dụ, đủ ngữ cảnh.",
+      "source_char_start": 49,
+      "source_excerpt": "In the following examples, input and output are distinguished by the presence or absence of prompts (>>>\nand…): to repeat the example, you must type everything after the prompt, wh"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 16,
+      "location": "PDF trang vật lý 16, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'Division (/) always returns a float'",
+      "chunk_id": "python-tutorial-3-7-0:16:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn về phép chia /, // và % nêu rõ hành vi và ví dụ; thông điệp chính trọn vẹn.",
+      "source_char_start": 31,
+      "source_excerpt": "Division (/) always returns a float. To do floor division and get an integer result (discarding any fractional\nresult) you can use the // operator; to calculate the remainder you c"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 17,
+      "location": "PDF trang vật lý 17, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'In addition to int and float'",
+      "chunk_id": "python-tutorial-3-7-0:17:paragraph:0",
+      "score": 2,
+      "reason": "Đoạn phân biệt int/float với Decimal, Fraction và complex có chủ thể, nội dung đầy đủ.",
+      "source_char_start": 31,
+      "source_excerpt": "In addition to int and float, Python supports other types of numbers, such as Decimal and Fraction.\nPython also has built-in support for complex numbers, and uses the j or J suﬃx t"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 18,
+      "location": "PDF trang vật lý 18, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: 'print(\"\"\"\\\\'",
+      "chunk_id": "python-tutorial-3-7-0:18:paragraph:0",
+      "score": 2,
+      "reason": "Ví dụ chuỗi nhiều dòng có code và output được giải thích, đọc được như một đơn vị.",
+      "source_char_start": 31,
+      "source_excerpt": "print(\"\"\"\\\nUsage: thingy [OPTIONS]\n-h Display this usage message\n-H hostname Hostname to connect to\n\"\"\")\nproduces the following output (note that the initial newline is not include"
+    },
+    {
+      "strategy": "C_paragraph_filter",
+      "source": "python-tutorial-3-7-0",
+      "page": 19,
+      "location": "PDF trang vật lý 19, offset 31 trong text corpus đã chuẩn hóa; đoạn bắt đầu: '>>> word[-1] # last character'",
+      "chunk_id": "python-tutorial-3-7-0:19:paragraph:0",
+      "score": 1,
+      "reason": "Chunk chứa phần tiếp nối ví dụ word/index; thiếu phần khởi tạo word và bắt đầu từ output nên chưa tự đủ ngữ cảnh.",
+      "source_char_start": 31,
+      "source_excerpt": ">>> word[-1] # last character\n'n'\n'o'\n>>> word[-6]\n'P'\n>>> word[-2] # second-last character\nNote that since -0 is the same as 0, negative indices start from -1.\nIn addition to inde"
+    }
+  ]
+}

@@ -42,9 +42,7 @@ def evaluate_query(question: dict[str, Any], hits: list[dict[str, Any]]) -> dict
     for rank, hit in enumerate(hits[:3], start=1):
         trace_hits.append({**hit, "rank": rank,
                            "gold_match": any(matches(hit, option) for option in options)})
-    first = bool(trace_hits and any(
-        hit.get("source") == option["source"] and str(hit.get("page")) == str(option["page"])
-        for option in options))
+    first = bool(trace_hits and trace_hits[0]["gold_match"])
     return {"id": question.get("id"), "split": question.get("split"), "strategy": question.get("strategy"),
             "question": question.get("question"), "expected_answer": question.get("expected_answer"),
             "gold": options, "filter": question.get("filter"), "hit_at_1": int(first),

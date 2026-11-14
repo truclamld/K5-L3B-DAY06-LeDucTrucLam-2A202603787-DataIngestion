@@ -72,7 +72,7 @@
           "char_start": 846,
           "physical_page": 11
         },
-        "score": 0.3447112294984629,
+        "score": 0.3447185725406081,
         "rank": 3,
         "gold_match": false
       }
@@ -132,7 +132,7 @@
           "char_start": 2525,
           "physical_page": 113
         },
-        "score": 0.20946191804431924,
+        "score": 0.20941792585049512,
         "rank": 2,
         "gold_match": false
       },
@@ -152,7 +152,7 @@
           "char_start": 0,
           "physical_page": 111
         },
-        "score": 0.19841877379897688,
+        "score": 0.1984512182047352,
         "rank": 3,
         "gold_match": false
       }
@@ -272,7 +272,7 @@
           "char_start": 846,
           "physical_page": 25
         },
-        "score": 0.3793947648591438,
+        "score": 0.3794655828041892,
         "rank": 1,
         "gold_match": false
       },
@@ -292,7 +292,7 @@
           "char_start": 2544,
           "physical_page": 9
         },
-        "score": 0.3491422576666079,
+        "score": 0.3491669556682291,
         "rank": 2,
         "gold_match": false
       },
@@ -312,7 +312,7 @@
           "char_start": 0,
           "physical_page": 25
         },
-        "score": 0.33274549957958266,
+        "score": 0.3328389209009919,
         "rank": 3,
         "gold_match": false
       }
@@ -352,7 +352,7 @@
           "char_start": 0,
           "physical_page": 47
         },
-        "score": 0.3511047932388087,
+        "score": 0.351193143054631,
         "rank": 1,
         "gold_match": false
       },
@@ -532,7 +532,7 @@
           "char_start": 1690,
           "physical_page": 22
         },
-        "score": 0.3928694598670359,
+        "score": 0.3928072663123894,
         "rank": 2,
         "gold_match": true
       },
@@ -573,7 +573,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -592,7 +592,7 @@
           "char_start": 846,
           "physical_page": 25
         },
-        "score": 0.436065259161893,
+        "score": 0.4361948985118078,
         "rank": 1,
         "gold_match": true
       },
@@ -632,7 +632,7 @@
           "char_start": 844,
           "physical_page": 22
         },
-        "score": 0.3849233046812197,
+        "score": 0.38491470703676733,
         "rank": 3,
         "gold_match": false
       }
@@ -932,7 +932,7 @@
           "char_start": 846,
           "physical_page": 25
         },
-        "score": 0.30443710500697196,
+        "score": 0.3046852322318827,
         "rank": 2,
         "gold_match": false
       },
@@ -978,7 +978,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 1,
+    "hit_at_1": 0,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -1058,7 +1058,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 1,
+    "hit_at_1": 0,
     "evidence_hit_at_3": 0,
     "hits": [
       {
@@ -1077,7 +1077,7 @@
           "char_start": 848,
           "physical_page": 105
         },
-        "score": 0.43468724531183756,
+        "score": 0.4338105265171459,
         "rank": 1,
         "gold_match": false
       },
@@ -1117,7 +1117,7 @@
           "char_start": 0,
           "physical_page": 105
         },
-        "score": 0.34309709256222976,
+        "score": 0.3430050628822433,
         "rank": 3,
         "gold_match": false
       }
@@ -1181,7 +1181,7 @@
           "char_start": 2525,
           "physical_page": 113
         },
-        "score": 0.3516034407241544,
+        "score": 0.3516241057723124,
         "rank": 2,
         "gold_match": false
       },
@@ -1201,7 +1201,7 @@
           "char_start": 0,
           "physical_page": 49
         },
-        "score": 0.3506364706856777,
+        "score": 0.3506217861419121,
         "rank": 3,
         "gold_match": false
       }
@@ -1226,7 +1226,7 @@
       "value": "chapter-12",
       "provided_by": "ngữ cảnh truy vấn trước khi truy xuất"
     },
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -1245,7 +1245,7 @@
           "char_start": 1687,
           "physical_page": 103
         },
-        "score": 0.40847118839106933,
+        "score": 0.4084648727390985,
         "rank": 1,
         "gold_match": true
       },
@@ -1405,7 +1405,7 @@
           "char_start": 2525,
           "physical_page": 113
         },
-        "score": 0.2910487214410644,
+        "score": 0.2908983512803913,
         "rank": 1,
         "gold_match": false
       },
@@ -1425,7 +1425,7 @@
           "char_start": 832,
           "physical_page": 16
         },
-        "score": 0.2764191490707568,
+        "score": 0.27641108594888686,
         "rank": 2,
         "gold_match": false
       },
@@ -1445,7 +1445,7 @@
           "char_start": 849,
           "physical_page": 35
         },
-        "score": 0.2763716516332565,
+        "score": 0.27614812754533413,
         "rank": 3,
         "gold_match": false
       }
@@ -1489,7 +1489,7 @@
           "char_start": 0,
           "physical_page": 111
         },
-        "score": 0.5113781902796729,
+        "score": 0.5113957506007936,
         "rank": 1,
         "gold_match": false
       },
@@ -1529,7 +1529,7 @@
           "char_start": 0,
           "physical_page": 115
         },
-        "score": 0.5042246977783192,
+        "score": 0.5042351114339854,
         "rank": 3,
         "gold_match": false
       }
@@ -1609,7 +1609,7 @@
           "char_start": 0,
           "physical_page": 115
         },
-        "score": 0.48108745910986095,
+        "score": 0.48117675084256617,
         "rank": 3,
         "gold_match": false
       }
@@ -1649,7 +1649,7 @@
           "chunk_index": 2,
           "physical_page": 17
         },
-        "score": 0.3426022169366527,
+        "score": 0.3425742245655973,
         "rank": 1,
         "gold_match": false
       },
@@ -1689,7 +1689,7 @@
           "chunk_index": 0,
           "physical_page": 18
         },
-        "score": 0.3340053837883472,
+        "score": 0.33390178975545903,
         "rank": 3,
         "gold_match": false
       }
@@ -1729,7 +1729,7 @@
           "chunk_index": 0,
           "physical_page": 111
         },
-        "score": 0.20070048551556385,
+        "score": 0.200627208854821,
         "rank": 1,
         "gold_match": false
       },
@@ -1749,7 +1749,7 @@
           "chunk_index": 1,
           "physical_page": 16
         },
-        "score": 0.17916317589744435,
+        "score": 0.17914851595929893,
         "rank": 2,
         "gold_match": false
       },
@@ -1849,7 +1849,7 @@
           "chunk_index": 2,
           "physical_page": 17
         },
-        "score": 0.22850241305355634,
+        "score": 0.22855975445536214,
         "rank": 3,
         "gold_match": false
       }
@@ -2009,7 +2009,7 @@
           "chunk_index": 0,
           "physical_page": 42
         },
-        "score": 0.33637297940569977,
+        "score": 0.3364113755455067,
         "rank": 3,
         "gold_match": false
       }
@@ -2030,7 +2030,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 1,
+    "hit_at_1": 0,
     "evidence_hit_at_3": 0,
     "hits": [
       {
@@ -2069,7 +2069,7 @@
           "chunk_index": 0,
           "physical_page": 28
         },
-        "score": 0.3970587893345686,
+        "score": 0.3970330527206638,
         "rank": 2,
         "gold_match": false
       },
@@ -2149,7 +2149,7 @@
           "chunk_index": 1,
           "physical_page": 16
         },
-        "score": 0.39432583703882407,
+        "score": 0.39434578690909716,
         "rank": 2,
         "gold_match": false
       },
@@ -2190,7 +2190,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 1,
+    "hit_at_1": 0,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -2209,7 +2209,7 @@
           "chunk_index": 0,
           "physical_page": 27
         },
-        "score": 0.3660923043907174,
+        "score": 0.36611987070596075,
         "rank": 1,
         "gold_match": false
       },
@@ -2289,7 +2289,7 @@
           "chunk_index": 1,
           "physical_page": 27
         },
-        "score": 0.31243656984874246,
+        "score": 0.3120139530174325,
         "rank": 1,
         "gold_match": false
       },
@@ -2369,7 +2369,7 @@
           "chunk_index": 2,
           "physical_page": 17
         },
-        "score": 0.26620906114689435,
+        "score": 0.26617047344028033,
         "rank": 1,
         "gold_match": false
       },
@@ -2510,7 +2510,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -2569,7 +2569,7 @@
           "chunk_index": 1,
           "physical_page": 15
         },
-        "score": 0.275687773921898,
+        "score": 0.2756590918153565,
         "rank": 3,
         "gold_match": false
       }
@@ -2734,7 +2734,7 @@
           "chunk_index": 0,
           "physical_page": 106
         },
-        "score": 0.35299956049954895,
+        "score": 0.3530359150334489,
         "rank": 3,
         "gold_match": false
       }
@@ -2818,7 +2818,7 @@
           "chunk_index": 0,
           "physical_page": 111
         },
-        "score": 0.32175076449633044,
+        "score": 0.3216905787903366,
         "rank": 3,
         "gold_match": false
       }
@@ -2843,7 +2843,7 @@
       "value": "chapter-12",
       "provided_by": "ngữ cảnh truy vấn trước khi truy xuất"
     },
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -2882,7 +2882,7 @@
           "chunk_index": 0,
           "physical_page": 106
         },
-        "score": 0.34465004698272517,
+        "score": 0.34458887366636737,
         "rank": 2,
         "gold_match": false
       },
@@ -2902,7 +2902,7 @@
           "chunk_index": 0,
           "physical_page": 107
         },
-        "score": 0.3346536040817901,
+        "score": 0.33451066809261953,
         "rank": 3,
         "gold_match": false
       }
@@ -2923,7 +2923,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -2942,7 +2942,7 @@
           "chunk_index": 0,
           "physical_page": 27
         },
-        "score": 0.3951672395163143,
+        "score": 0.3951745749562927,
         "rank": 1,
         "gold_match": true
       },
@@ -3022,7 +3022,7 @@
           "chunk_index": 2,
           "physical_page": 42
         },
-        "score": 0.298205157900432,
+        "score": 0.2981192582586989,
         "rank": 1,
         "gold_match": false
       },
@@ -3042,7 +3042,7 @@
           "chunk_index": 1,
           "physical_page": 59
         },
-        "score": 0.2762748668870857,
+        "score": 0.2762614374679987,
         "rank": 2,
         "gold_match": false
       },
@@ -3062,7 +3062,7 @@
           "chunk_index": 1,
           "physical_page": 16
         },
-        "score": 0.27434649544271283,
+        "score": 0.2743254335878733,
         "rank": 3,
         "gold_match": false
       }
@@ -3106,7 +3106,7 @@
           "chunk_index": 0,
           "physical_page": 111
         },
-        "score": 0.5176582345296358,
+        "score": 0.5176040253659784,
         "rank": 1,
         "gold_match": false
       },
@@ -3126,7 +3126,7 @@
           "chunk_index": 0,
           "physical_page": 101
         },
-        "score": 0.5079192172547424,
+        "score": 0.5079035430120877,
         "rank": 2,
         "gold_match": true
       },
@@ -3167,7 +3167,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -3266,7 +3266,7 @@
           "chunk_index": 2,
           "physical_page": 17
         },
-        "score": 0.3426022169366527,
+        "score": 0.3425742245655973,
         "rank": 1,
         "gold_match": false
       },
@@ -3306,7 +3306,7 @@
           "chunk_index": 0,
           "physical_page": 18
         },
-        "score": 0.3340053837883472,
+        "score": 0.33390178975545903,
         "rank": 3,
         "gold_match": false
       }
@@ -3346,7 +3346,7 @@
           "chunk_index": 0,
           "physical_page": 111
         },
-        "score": 0.20070048551556385,
+        "score": 0.200627208854821,
         "rank": 1,
         "gold_match": false
       },
@@ -3366,7 +3366,7 @@
           "chunk_index": 1,
           "physical_page": 16
         },
-        "score": 0.17916317589744435,
+        "score": 0.17914851595929893,
         "rank": 2,
         "gold_match": false
       },
@@ -3466,7 +3466,7 @@
           "chunk_index": 2,
           "physical_page": 17
         },
-        "score": 0.22850241305355634,
+        "score": 0.22855975445536214,
         "rank": 3,
         "gold_match": false
       }
@@ -3626,7 +3626,7 @@
           "chunk_index": 0,
           "physical_page": 42
         },
-        "score": 0.33637297940569977,
+        "score": 0.3364113755455067,
         "rank": 3,
         "gold_match": false
       }
@@ -3647,7 +3647,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 1,
+    "hit_at_1": 0,
     "evidence_hit_at_3": 0,
     "hits": [
       {
@@ -3686,7 +3686,7 @@
           "chunk_index": 0,
           "physical_page": 28
         },
-        "score": 0.3970587893345686,
+        "score": 0.3970330527206638,
         "rank": 2,
         "gold_match": false
       },
@@ -3766,7 +3766,7 @@
           "chunk_index": 1,
           "physical_page": 16
         },
-        "score": 0.39432583703882407,
+        "score": 0.39434578690909716,
         "rank": 2,
         "gold_match": false
       },
@@ -3807,7 +3807,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 1,
+    "hit_at_1": 0,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -3826,7 +3826,7 @@
           "chunk_index": 0,
           "physical_page": 27
         },
-        "score": 0.3660923043907174,
+        "score": 0.36611987070596075,
         "rank": 1,
         "gold_match": false
       },
@@ -3906,7 +3906,7 @@
           "chunk_index": 1,
           "physical_page": 27
         },
-        "score": 0.31243656984874246,
+        "score": 0.3120139530174325,
         "rank": 1,
         "gold_match": false
       },
@@ -3986,7 +3986,7 @@
           "chunk_index": 2,
           "physical_page": 17
         },
-        "score": 0.26620906114689435,
+        "score": 0.26617047344028033,
         "rank": 1,
         "gold_match": false
       },
@@ -4127,7 +4127,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -4186,7 +4186,7 @@
           "chunk_index": 1,
           "physical_page": 15
         },
-        "score": 0.275687773921898,
+        "score": 0.2756590918153565,
         "rank": 3,
         "gold_match": false
       }
@@ -4351,7 +4351,7 @@
           "chunk_index": 0,
           "physical_page": 106
         },
-        "score": 0.35299956049954895,
+        "score": 0.3530359150334489,
         "rank": 3,
         "gold_match": false
       }
@@ -4376,7 +4376,7 @@
       "value": "chapter-15",
       "provided_by": "ngữ cảnh truy vấn trước khi truy xuất"
     },
-    "hit_at_1": 1,
+    "hit_at_1": 0,
     "evidence_hit_at_3": 0,
     "hits": [
       {
@@ -4415,7 +4415,7 @@
           "chunk_index": 0,
           "physical_page": 111
         },
-        "score": 0.32175076449633044,
+        "score": 0.3216905787903366,
         "rank": 2,
         "gold_match": false
       },
@@ -4501,7 +4501,7 @@
           "chunk_index": 0,
           "physical_page": 106
         },
-        "score": 0.34465004698272517,
+        "score": 0.34458887366636737,
         "rank": 2,
         "gold_match": false
       },
@@ -4544,7 +4544,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -4563,7 +4563,7 @@
           "chunk_index": 0,
           "physical_page": 27
         },
-        "score": 0.3951672395163143,
+        "score": 0.3951745749562927,
         "rank": 1,
         "gold_match": true
       },
@@ -4643,7 +4643,7 @@
           "chunk_index": 2,
           "physical_page": 42
         },
-        "score": 0.298205157900432,
+        "score": 0.2981192582586989,
         "rank": 1,
         "gold_match": false
       },
@@ -4663,7 +4663,7 @@
           "chunk_index": 1,
           "physical_page": 59
         },
-        "score": 0.2762748668870857,
+        "score": 0.2762614374679987,
         "rank": 2,
         "gold_match": false
       },
@@ -4683,7 +4683,7 @@
           "chunk_index": 1,
           "physical_page": 16
         },
-        "score": 0.27434649544271283,
+        "score": 0.2743254335878733,
         "rank": 3,
         "gold_match": false
       }
@@ -4708,7 +4708,7 @@
       "value": "chapter-11",
       "provided_by": "ngữ cảnh truy vấn trước khi truy xuất"
     },
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
@@ -4727,7 +4727,7 @@
           "chunk_index": 0,
           "physical_page": 101
         },
-        "score": 0.5079192172547424,
+        "score": 0.5079035430120877,
         "rank": 1,
         "gold_match": true
       },
@@ -4747,7 +4747,7 @@
           "chunk_index": 1,
           "physical_page": 100
         },
-        "score": 0.45852922061453627,
+        "score": 0.4586103227856705,
         "rank": 2,
         "gold_match": false
       },
@@ -4790,7 +4790,7 @@
       }
     ],
     "filter": null,
-    "hit_at_1": 0,
+    "hit_at_1": 1,
     "evidence_hit_at_3": 1,
     "hits": [
       {
