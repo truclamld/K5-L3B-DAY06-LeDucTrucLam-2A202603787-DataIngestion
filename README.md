@@ -1,47 +1,62 @@
 # Day 06 · Data Ingestion Engineering
 
-**Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
+Lab cá nhân về xây dựng pipeline ingestion và đánh giá truy xuất bằng vector search. Repo có corpus, manifest, benchmark và pipeline chạy được với PostgreSQL + pgvector cùng embedding API tương thích OpenAI.
 
-Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.
+## Dữ liệu và benchmark trong repo
 
-| 📄 Dữ liệu | 🧩 Chiến lược | 🎯 Benchmark |
-|---|---|---|
-| Tối thiểu **30 trang nội dung** | Tối thiểu **3 cấu hình** | Tối thiểu **20 câu hỏi** |
+- **PDF corpus:** [`data/Tutorial_EDIT.pdf`](data/Tutorial_EDIT.pdf), Python Tutorial 3.7.0.
+- **Manifest:** [`data/manifest.json`](data/manifest.json) ghi nguồn, giấy phép, phiên bản, quy tắc đếm trang và danh sách trang nội dung. Phạm vi là Chương 1–15: **98 trang nội dung** (trên 155 trang PDF vật lý), 204.510 ký tự. Các trang bìa, mục lục, trang trống, trang phân cách chương và phụ lục ngoài phạm vi được loại trừ.
+- **Corpus trích xuất:** [`data/corpus.jsonl`](data/corpus.jsonl); giữ ID nguồn, số trang và văn bản để kiểm tra/truy vết.
+- **Benchmark:** [`benchmark/questions.jsonl`](benchmark/questions.jsonl), 20 câu hỏi, chia 15 dev / 5 test, có evidence và câu hỏi metadata filter. Không sửa test sau khi xem kết quả.
+- [`data/format-example.json`](data/format-example.json) chỉ là ví dụ định dạng, không phải dữ liệu đánh giá.
 
-## Bắt đầu nhanh
+Các đường dẫn lệnh bên dưới giả định chạy từ thư mục `starter/`. Mặc định pipeline đọc manifest, PDF và benchmark từ các thư mục gốc `../data/` và `../benchmark/`; kết quả được ghi vào `starter/results/`.
 
-Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
+## Yêu cầu
 
-## 1. Xây pipeline
+- Python 3.11 trở lên (starter khai báo hỗ trợ 3.11–3.14), Docker Desktop/Engine + Compose.
+- Một embedding model thật, API tương thích OpenAI hoặc model local; ghi rõ model và số chiều. Dùng cùng model cho cả ba cấu hình.
+- Kết nối mạng khi cài thư viện/tải Docker image hoặc gọi embedding API.
 
-![Đọc tài liệu, chuẩn hóa, chia chunk, tạo vector, lưu và kiểm tra](assets/ingestion-pipeline.svg)
+## Setup starter PostgreSQL + pgvector
 
-Chọn tài liệu được phép sử dụng; giữ **ID tài liệu, nguồn, trang/vị trí** và metadata phù hợp. Dùng embedding model thật qua API hoặc chạy local; lưu và truy xuất bằng pgvector, Qdrant, Chroma hoặc một store tương đương.
+```bash
+cd starter
+python3 -m venv .venv
+# macOS/Linux
+source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+# macOS/Linux
+cp .env.example .env
+# Windows PowerShell: Copy-Item .env.example .env
+docker compose -p day6_student_starter up -d --wait
+python scripts/check_setup.py
+```
 
-## 2. So sánh và đánh giá
+`check_setup.py` kiểm tra riêng kết nối PostgreSQL/pgvector; thông báo `Setup OK` không có nghĩa pipeline hay benchmark đã chạy. Compose ánh xạ DB về `127.0.0.1:55433`; cấu hình mặc định chỉ dành cho local lab. Nếu đổi cổng, cập nhật cả `docker-compose.yml` và `DATABASE_URL` trong `.env`. Không xóa Docker volume nếu cần giữ database.
 
-![Ba chiến lược được đánh giá trên cùng corpus và benchmark dev/test](assets/benchmark-workflow.svg)
+## Chạy lại benchmark
 
-Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **15 câu dev / 5 câu test** trước khi chạy; chọn cấu hình trên dev, rồi đánh giá test sau khi cố định. Mỗi câu hỏi cần có đoạn bằng chứng và trang nguồn; thiết kế bộ câu hỏi và đánh giá theo [BENCHMARK.md](BENCHMARK.md).
+Pipeline nằm trong `starter/src/`. Runner dùng PostgreSQL + pgvector và gọi embedding API tương thích OpenAI; cần có thông tin model và API key hợp lệ. Trong `starter/.env`, điền `EMBEDDING_MODEL`, `EMBEDDING_DIMENSIONS` và một trong `OPENAI_API_KEY` / `OPENROUTER_API_KEY`. Với OpenRouter hoặc endpoint tương thích khác, đặt `EMBEDDING_BASE_URL` thành URL gốc API (ví dụ `https://openrouter.ai/api/v1`); mặc định là `https://api.openai.com/v1`. Không commit `.env`.
 
-Đánh giá theo năm khía cạnh: **độ chính xác truy xuất**, **tính mạch lạc của chunk**, **tính hữu dụng của metadata**, **chất lượng grounding** và **tác động của chiến lược dữ liệu**. Giải thích lựa chọn bằng kết quả, ví dụ lỗi và các đánh đổi.
+Từ `starter/`:
 
-## 3. Chuẩn bị bài nộp
+```bash
+python -m src.run
+```
 
-1. Chạy pipeline và lưu cấu hình, kết quả top-3, trace cùng nhãn đánh giá thủ công.
-2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và bản sao [mẫu báo cáo cá nhân](report/individual/MSSV_HoTen.md).
-3. Kiểm tra mã nguồn, cách chạy, manifest dữ liệu và checklist trong [SUBMISSION.md](SUBMISSION.md).
+Lệnh chạy toàn bộ 20 câu hỏi trên ba cấu hình A (fixed-size), B (paragraph) và C (paragraph + metadata filter), tạo trace top-3 và ghi đè `starter/results/traces.json`, `summary.json`, `resource_usage.json` và `manual_assessment_samples.json`. Nó gọi embedding API và có thể phát sinh chi phí; thời gian chạy phụ thuộc provider. Mỗi lần chạy sẽ nạp lại các chunk theo strategy vào database. Đọc [`GUIDE.md`](GUIDE.md) để biết định nghĩa chỉ số và cách hoàn tất đánh giá thủ công.
 
-## Tài liệu hướng dẫn
+Nếu thay dữ liệu, cập nhật manifest và gold evidence/benchmark tương ứng. Với nguồn không thể đưa vào repo, ghi URL/quyền truy cập và hướng dẫn tái tạo; đảm bảo người chấm có cách xác minh. Manifest phải nêu số trang hợp lệ và quy tắc tính, không chỉ dựa vào số trang vật lý.
 
-| Bạn cần tìm | Tài liệu |
-|---|---|
-| Setup baseline PostgreSQL + pgvector | [starter/README.md](starter/README.md) |
-| Các bước làm và cách tính chỉ số | [GUIDE.md](GUIDE.md) |
-| Tiến độ trong 4 giờ | [CHECKPOINTS.md](CHECKPOINTS.md) |
-| Năm tiêu chí benchmark và bộ câu hỏi | [BENCHMARK.md](BENCHMARK.md) |
-| Tiêu chí chấm điểm | [RUBRIC.md](RUBRIC.md) |
-| Quy tắc sử dụng dữ liệu, AI và API | [RULES.md](RULES.md) |
-| Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
+## Đường dẫn bài nộp và tài liệu
 
-[data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+- Mã pipeline mẫu: [`starter/src/`](starter/src/)
+- Manifest / corpus: [`data/manifest.json`](data/manifest.json), [`data/corpus.jsonl`](data/corpus.jsonl), [`data/Tutorial_EDIT.pdf`](data/Tutorial_EDIT.pdf)
+- Benchmark và log thí nghiệm: [`benchmark/questions.jsonl`](benchmark/questions.jsonl), [`artifacts/experiment_log.csv`](artifacts/experiment_log.csv)
+- Trace/kết quả/audit mẫu: [`starter/results/`](starter/results/)
+- Báo cáo cá nhân: [`report/individual/2A202603787_LeDucTrucLam.md`](report/individual/2A202603787_LeDucTrucLam.md)
+- Hướng dẫn chi tiết: [`GUIDE.md`](GUIDE.md), [`BENCHMARK.md`](BENCHMARK.md), [`SUBMISSION.md`](SUBMISSION.md), [`RUBRIC.md`](RUBRIC.md), [`RULES.md`](RULES.md)
+
+Trước khi nộp, kiểm tra các trace/kết quả khớp với lần chạy cuối, điền [`STUDENT.md`](STUDENT.md), ghi model/phiên bản/chi phí/thời điểm chạy và bảo đảm repo không chứa secret hay dữ liệu không được phép chia sẻ. Xem checklist đầy đủ trong [`SUBMISSION.md`](SUBMISSION.md).
