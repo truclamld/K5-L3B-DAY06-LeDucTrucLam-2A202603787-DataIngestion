@@ -1,0 +1,781 @@
+{
+  "source_id": "python-tutorial-3-7-0",
+  "title": "Python Tutorial",
+  "source_path_or_url": "data/Tutorial_EDIT.pdf",
+  "source_url": "https://docs.python.org/3.7/tutorial/index.html",
+  "license_or_permission": "Python Software Foundation License Version 2 (see Appendix C in this PDF); appendices listing third-party software licenses are excluded from this content-page count",
+  "accessed_at": "2026-11-14",
+  "version": "3.7.0",
+  "physical_page_count": 155,
+  "included_page_count": 98,
+  "total_char_count": 204510,
+  "included_pages": [
+    {
+      "section_id": "chapter-01",
+      "section": "Whetting Your Appetite",
+      "start_page": 9,
+      "end_page": 10,
+      "printed_start_page": 3,
+      "printed_end_page": 4,
+      "content_pages": [
+        {
+          "page_id": "physical-009",
+          "physical_page": 9,
+          "char_count": 3375
+        },
+        {
+          "page_id": "physical-010",
+          "physical_page": 10,
+          "char_count": 1107
+        }
+      ],
+      "content_page_count": 2,
+      "char_count": 4482
+    },
+    {
+      "section_id": "chapter-02",
+      "section": "Using the Python Interpreter",
+      "start_page": 11,
+      "end_page": 14,
+      "printed_start_page": 5,
+      "printed_end_page": 8,
+      "content_pages": [
+        {
+          "page_id": "physical-011",
+          "physical_page": 11,
+          "char_count": 2854
+        },
+        {
+          "page_id": "physical-012",
+          "physical_page": 12,
+          "char_count": 2554
+        },
+        {
+          "page_id": "physical-013",
+          "physical_page": 13,
+          "char_count": 459
+        }
+      ],
+      "content_page_count": 3,
+      "char_count": 5867
+    },
+    {
+      "section_id": "chapter-03",
+      "section": "An Informal Introduction to Python",
+      "start_page": 15,
+      "end_page": 24,
+      "printed_start_page": 9,
+      "printed_end_page": 18,
+      "content_pages": [
+        {
+          "page_id": "physical-015",
+          "physical_page": 15,
+          "char_count": 1881
+        },
+        {
+          "page_id": "physical-016",
+          "physical_page": 16,
+          "char_count": 1905
+        },
+        {
+          "page_id": "physical-017",
+          "physical_page": 17,
+          "char_count": 2467
+        },
+        {
+          "page_id": "physical-018",
+          "physical_page": 18,
+          "char_count": 1586
+        },
+        {
+          "page_id": "physical-019",
+          "physical_page": 19,
+          "char_count": 2050
+        },
+        {
+          "page_id": "physical-020",
+          "physical_page": 20,
+          "char_count": 1757
+        },
+        {
+          "page_id": "physical-021",
+          "physical_page": 21,
+          "char_count": 1693
+        },
+        {
+          "page_id": "physical-022",
+          "physical_page": 22,
+          "char_count": 2462
+        },
+        {
+          "page_id": "physical-023",
+          "physical_page": 23,
+          "char_count": 394
+        }
+      ],
+      "content_page_count": 9,
+      "char_count": 16195
+    },
+    {
+      "section_id": "chapter-04",
+      "section": "More Control Flow Tools",
+      "start_page": 25,
+      "end_page": 36,
+      "printed_start_page": 19,
+      "printed_end_page": 30,
+      "content_pages": [
+        {
+          "page_id": "physical-025",
+          "physical_page": 25,
+          "char_count": 1386
+        },
+        {
+          "page_id": "physical-026",
+          "physical_page": 26,
+          "char_count": 1618
+        },
+        {
+          "page_id": "physical-027",
+          "physical_page": 27,
+          "char_count": 2333
+        },
+        {
+          "page_id": "physical-028",
+          "physical_page": 28,
+          "char_count": 1686
+        },
+        {
+          "page_id": "physical-029",
+          "physical_page": 29,
+          "char_count": 3142
+        },
+        {
+          "page_id": "physical-030",
+          "physical_page": 30,
+          "char_count": 2045
+        },
+        {
+          "page_id": "physical-031",
+          "physical_page": 31,
+          "char_count": 1971
+        },
+        {
+          "page_id": "physical-032",
+          "physical_page": 32,
+          "char_count": 2180
+        },
+        {
+          "page_id": "physical-033",
+          "physical_page": 33,
+          "char_count": 2151
+        },
+        {
+          "page_id": "physical-034",
+          "physical_page": 34,
+          "char_count": 2870
+        },
+        {
+          "page_id": "physical-035",
+          "physical_page": 35,
+          "char_count": 2211
+        }
+      ],
+      "content_page_count": 11,
+      "char_count": 23593
+    },
+    {
+      "section_id": "chapter-05",
+      "section": "Data Structures",
+      "start_page": 37,
+      "end_page": 48,
+      "printed_start_page": 31,
+      "printed_end_page": 42,
+      "content_pages": [
+        {
+          "page_id": "physical-037",
+          "physical_page": 37,
+          "char_count": 1914
+        },
+        {
+          "page_id": "physical-038",
+          "physical_page": 38,
+          "char_count": 1669
+        },
+        {
+          "page_id": "physical-039",
+          "physical_page": 39,
+          "char_count": 2220
+        },
+        {
+          "page_id": "physical-040",
+          "physical_page": 40,
+          "char_count": 1899
+        },
+        {
+          "page_id": "physical-041",
+          "physical_page": 41,
+          "char_count": 1706
+        },
+        {
+          "page_id": "physical-042",
+          "physical_page": 42,
+          "char_count": 2455
+        },
+        {
+          "page_id": "physical-043",
+          "physical_page": 43,
+          "char_count": 2039
+        },
+        {
+          "page_id": "physical-044",
+          "physical_page": 44,
+          "char_count": 2623
+        },
+        {
+          "page_id": "physical-045",
+          "physical_page": 45,
+          "char_count": 1499
+        },
+        {
+          "page_id": "physical-046",
+          "physical_page": 46,
+          "char_count": 2999
+        },
+        {
+          "page_id": "physical-047",
+          "physical_page": 47,
+          "char_count": 787
+        }
+      ],
+      "content_page_count": 11,
+      "char_count": 21810
+    },
+    {
+      "section_id": "chapter-06",
+      "section": "Modules",
+      "start_page": 49,
+      "end_page": 58,
+      "printed_start_page": 43,
+      "printed_end_page": 52,
+      "content_pages": [
+        {
+          "page_id": "physical-049",
+          "physical_page": 49,
+          "char_count": 2008
+        },
+        {
+          "page_id": "physical-050",
+          "physical_page": 50,
+          "char_count": 2613
+        },
+        {
+          "page_id": "physical-051",
+          "physical_page": 51,
+          "char_count": 2155
+        },
+        {
+          "page_id": "physical-052",
+          "physical_page": 52,
+          "char_count": 3362
+        },
+        {
+          "page_id": "physical-053",
+          "physical_page": 53,
+          "char_count": 2324
+        },
+        {
+          "page_id": "physical-054",
+          "physical_page": 54,
+          "char_count": 3413
+        },
+        {
+          "page_id": "physical-055",
+          "physical_page": 55,
+          "char_count": 2210
+        },
+        {
+          "page_id": "physical-056",
+          "physical_page": 56,
+          "char_count": 3094
+        },
+        {
+          "page_id": "physical-057",
+          "physical_page": 57,
+          "char_count": 812
+        }
+      ],
+      "content_page_count": 9,
+      "char_count": 21991
+    },
+    {
+      "section_id": "chapter-07",
+      "section": "Input and Output",
+      "start_page": 59,
+      "end_page": 66,
+      "printed_start_page": 53,
+      "printed_end_page": 60,
+      "content_pages": [
+        {
+          "page_id": "physical-059",
+          "physical_page": 59,
+          "char_count": 2487
+        },
+        {
+          "page_id": "physical-060",
+          "physical_page": 60,
+          "char_count": 2092
+        },
+        {
+          "page_id": "physical-061",
+          "physical_page": 61,
+          "char_count": 2217
+        },
+        {
+          "page_id": "physical-062",
+          "physical_page": 62,
+          "char_count": 1754
+        },
+        {
+          "page_id": "physical-063",
+          "physical_page": 63,
+          "char_count": 2953
+        },
+        {
+          "page_id": "physical-064",
+          "physical_page": 64,
+          "char_count": 2581
+        },
+        {
+          "page_id": "physical-065",
+          "physical_page": 65,
+          "char_count": 2683
+        },
+        {
+          "page_id": "physical-066",
+          "physical_page": 66,
+          "char_count": 449
+        }
+      ],
+      "content_page_count": 8,
+      "char_count": 17216
+    },
+    {
+      "section_id": "chapter-08",
+      "section": "Errors and Exceptions",
+      "start_page": 67,
+      "end_page": 74,
+      "printed_start_page": 61,
+      "printed_end_page": 68,
+      "content_pages": [
+        {
+          "page_id": "physical-067",
+          "physical_page": 67,
+          "char_count": 1723
+        },
+        {
+          "page_id": "physical-068",
+          "physical_page": 68,
+          "char_count": 2997
+        },
+        {
+          "page_id": "physical-069",
+          "physical_page": 69,
+          "char_count": 1991
+        },
+        {
+          "page_id": "physical-070",
+          "physical_page": 70,
+          "char_count": 1926
+        },
+        {
+          "page_id": "physical-071",
+          "physical_page": 71,
+          "char_count": 1966
+        },
+        {
+          "page_id": "physical-072",
+          "physical_page": 72,
+          "char_count": 2176
+        },
+        {
+          "page_id": "physical-073",
+          "physical_page": 73,
+          "char_count": 777
+        }
+      ],
+      "content_page_count": 7,
+      "char_count": 13556
+    },
+    {
+      "section_id": "chapter-09",
+      "section": "Classes",
+      "start_page": 75,
+      "end_page": 88,
+      "printed_start_page": 69,
+      "printed_end_page": 82,
+      "content_pages": [
+        {
+          "page_id": "physical-075",
+          "physical_page": 75,
+          "char_count": 3148
+        },
+        {
+          "page_id": "physical-076",
+          "physical_page": 76,
+          "char_count": 4308
+        },
+        {
+          "page_id": "physical-077",
+          "physical_page": 77,
+          "char_count": 2511
+        },
+        {
+          "page_id": "physical-078",
+          "physical_page": 78,
+          "char_count": 2440
+        },
+        {
+          "page_id": "physical-079",
+          "physical_page": 79,
+          "char_count": 2710
+        },
+        {
+          "page_id": "physical-080",
+          "physical_page": 80,
+          "char_count": 2410
+        },
+        {
+          "page_id": "physical-081",
+          "physical_page": 81,
+          "char_count": 2129
+        },
+        {
+          "page_id": "physical-082",
+          "physical_page": 82,
+          "char_count": 2578
+        },
+        {
+          "page_id": "physical-083",
+          "physical_page": 83,
+          "char_count": 2701
+        },
+        {
+          "page_id": "physical-084",
+          "physical_page": 84,
+          "char_count": 3444
+        },
+        {
+          "page_id": "physical-085",
+          "physical_page": 85,
+          "char_count": 2244
+        },
+        {
+          "page_id": "physical-086",
+          "physical_page": 86,
+          "char_count": 1419
+        },
+        {
+          "page_id": "physical-087",
+          "physical_page": 87,
+          "char_count": 1798
+        }
+      ],
+      "content_page_count": 13,
+      "char_count": 33840
+    },
+    {
+      "section_id": "chapter-10",
+      "section": "Brief Tour of the Standard Library",
+      "start_page": 89,
+      "end_page": 94,
+      "printed_start_page": 83,
+      "printed_end_page": 88,
+      "content_pages": [
+        {
+          "page_id": "physical-089",
+          "physical_page": 89,
+          "char_count": 1278
+        },
+        {
+          "page_id": "physical-090",
+          "physical_page": 90,
+          "char_count": 1846
+        },
+        {
+          "page_id": "physical-091",
+          "physical_page": 91,
+          "char_count": 1843
+        },
+        {
+          "page_id": "physical-092",
+          "physical_page": 92,
+          "char_count": 1708
+        },
+        {
+          "page_id": "physical-093",
+          "physical_page": 93,
+          "char_count": 2556
+        },
+        {
+          "page_id": "physical-094",
+          "physical_page": 94,
+          "char_count": 361
+        }
+      ],
+      "content_page_count": 6,
+      "char_count": 9592
+    },
+    {
+      "section_id": "chapter-11",
+      "section": "Brief Tour of the Standard Library - Part II",
+      "start_page": 95,
+      "end_page": 102,
+      "printed_start_page": 89,
+      "printed_end_page": 96,
+      "content_pages": [
+        {
+          "page_id": "physical-095",
+          "physical_page": 95,
+          "char_count": 1636
+        },
+        {
+          "page_id": "physical-096",
+          "physical_page": 96,
+          "char_count": 2408
+        },
+        {
+          "page_id": "physical-097",
+          "physical_page": 97,
+          "char_count": 2034
+        },
+        {
+          "page_id": "physical-098",
+          "physical_page": 98,
+          "char_count": 2271
+        },
+        {
+          "page_id": "physical-099",
+          "physical_page": 99,
+          "char_count": 2375
+        },
+        {
+          "page_id": "physical-100",
+          "physical_page": 100,
+          "char_count": 2194
+        },
+        {
+          "page_id": "physical-101",
+          "physical_page": 101,
+          "char_count": 857
+        }
+      ],
+      "content_page_count": 7,
+      "char_count": 13775
+    },
+    {
+      "section_id": "chapter-12",
+      "section": "Virtual Environments and Packages",
+      "start_page": 103,
+      "end_page": 106,
+      "printed_start_page": 97,
+      "printed_end_page": 100,
+      "content_pages": [
+        {
+          "page_id": "physical-103",
+          "physical_page": 103,
+          "char_count": 2208
+        },
+        {
+          "page_id": "physical-104",
+          "physical_page": 104,
+          "char_count": 2390
+        },
+        {
+          "page_id": "physical-105",
+          "physical_page": 105,
+          "char_count": 1887
+        },
+        {
+          "page_id": "physical-106",
+          "physical_page": 106,
+          "char_count": 306
+        }
+      ],
+      "content_page_count": 4,
+      "char_count": 6791
+    },
+    {
+      "section_id": "chapter-13",
+      "section": "What Now?",
+      "start_page": 107,
+      "end_page": 108,
+      "printed_start_page": 101,
+      "printed_end_page": 102,
+      "content_pages": [
+        {
+          "page_id": "physical-107",
+          "physical_page": 107,
+          "char_count": 2867
+        },
+        {
+          "page_id": "physical-108",
+          "physical_page": 108,
+          "char_count": 274
+        }
+      ],
+      "content_page_count": 2,
+      "char_count": 3141
+    },
+    {
+      "section_id": "chapter-14",
+      "section": "Interactive Input Editing and History Substitution",
+      "start_page": 109,
+      "end_page": 110,
+      "printed_start_page": 103,
+      "printed_end_page": 104,
+      "content_pages": [
+        {
+          "page_id": "physical-109",
+          "physical_page": 109,
+          "char_count": 1961
+        }
+      ],
+      "content_page_count": 1,
+      "char_count": 1961
+    },
+    {
+      "section_id": "chapter-15",
+      "section": "Floating Point Arithmetic: Issues and Limitations",
+      "start_page": 111,
+      "end_page": 116,
+      "printed_start_page": 105,
+      "printed_end_page": 110,
+      "content_pages": [
+        {
+          "page_id": "physical-111",
+          "physical_page": 111,
+          "char_count": 2053
+        },
+        {
+          "page_id": "physical-112",
+          "physical_page": 112,
+          "char_count": 2570
+        },
+        {
+          "page_id": "physical-113",
+          "physical_page": 113,
+          "char_count": 2986
+        },
+        {
+          "page_id": "physical-114",
+          "physical_page": 114,
+          "char_count": 2265
+        },
+        {
+          "page_id": "physical-115",
+          "physical_page": 115,
+          "char_count": 826
+        }
+      ],
+      "content_page_count": 5,
+      "char_count": 10700
+    }
+  ],
+  "excluded_physical_pages": [
+    {
+      "pages": [
+        1
+      ],
+      "reason": "cover/title page"
+    },
+    {
+      "pages": [
+        2,
+        6
+      ],
+      "reason": "blank or page-number-only"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        5,
+        8
+      ],
+      "reason": "table of contents"
+    },
+    {
+      "pages": [
+        7
+      ],
+      "reason": "preface; outside selected Chapters 1-15 scope"
+    },
+    {
+      "pages": [
+        14,
+        24,
+        36,
+        48,
+        58,
+        74,
+        88,
+        102,
+        110,
+        116
+      ],
+      "reason": "chapter-separator page with running header/page number only; excluded from content page count"
+    },
+    {
+      "pages": [
+        117,
+        118
+      ],
+      "reason": "Chapter 16 Appendix; outside selected Chapters 1-15 scope"
+    },
+    {
+      "pages": [
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137,
+        138,
+        139,
+        140,
+        141,
+        142,
+        143,
+        144,
+        145,
+        146,
+        147,
+        148,
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155
+      ],
+      "reason": "glossary, document notes, license/copyright appendices, and index; outside selected Chapters 1-15 scope"
+    }
+  ],
+  "page_numbering": "start_page/end_page are inclusive 1-based physical page positions in the PDF. printed_start_page/printed_end_page are the page numbers shown in the document table of contents.",
+  "content_scope": "The 15 main tutorial chapters (Chapters 1-15). The preface, Chapter 16 Appendix, glossary, document notes, license/copyright appendices, index, cover, table of contents, blank and chapter-separator-only pages are excluded from the counted content.",
+  "boundary_note": "content_pages lists substantive pages counted. Chapter-separator-only pages can fall within a section boundary but are excluded from content_pages."
+}
