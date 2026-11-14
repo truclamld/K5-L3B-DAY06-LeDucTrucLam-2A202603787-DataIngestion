@@ -1,0 +1,1127 @@
+[
+  {
+    "strategy": "A_fixed",
+    "split": "test",
+    "id": "q15",
+    "question": "Khi dùng `pip freeze`, tài liệu khuyên lưu kết quả theo quy ước nào và cài lại danh sách đó ra sao?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "quote": "A common convention is to put this list in a requirements.txt file"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:105:fixed:848",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "text": "environment:\n(tutorial-env) $ pip list\nnovas (3.1.1.3)\nnumpy (1.9.2)\npip (7.0.3)\nrequests (2.7.0)\nsetuptools (16.0)\npip freeze will produce a similar list of the installed packages, but the output uses the format thatpip\ninstall expects. A common convention is to put this list in arequirements.txt file:\n(tutorial-env) $ pip freeze > requirements.txt\n(tutorial-env) $ cat requirements.txt\nnovas==3.1.1.3\nnumpy==1.9.2\nrequests==2.7.0\nThe requirements.txt can then be committed to version control and shipped as part of an application.\nUsers can then install all the necessary packages withinstall -r:\n(tutorial-env) $ pip install -r requirements.txt\nCollecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n...\nCollecting numpy==1.9.2 (from -r requirements.txt (line 2))\n...\nCollecting requests==2.7.0 (from -r requirements.txt (line 3))\n...\nInstalling collected packages: novas, numpy, requests\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3 numpy-1.9.2",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "char_end": 1833,
+          "language": "en",
+          "char_start": 848,
+          "physical_page": 105
+        },
+        "score": 0.43468724531183756,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:106:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 106,
+        "text": "Python Tutorial, Release 3.7.0\npip has many more options. Consult the installing-index guide for complete documentation forpip. When\nyou’vewrittenapackageandwanttomakeitavailableonthePythonPackageIndex, consultthedistributing-\nindex guide.\n100 Chapter 12. Virtual Environments and Packages",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "char_end": 289,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 106
+        },
+        "score": 0.35299956049954895,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:105:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "text": "Python Tutorial, Release 3.7.0\n(tutorial-env) $ pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\npip uninstall followed by one or more package names will remove the packages from the virtual environ-\nment.\npip show will display information about a particular package:\n(tutorial-env) $ pip show requests\n---\nMetadata-Version: 2.0\nName: requests\nVersion: 2.7.0\nSummary: Python HTTP for Humans.\nHome-page: http://python-requests.org\nAuthor: Kenneth Reitz\nAuthor-email: me@kennethreitz.com\nLicense: Apache 2.0\nLocation: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\nRequires:\npip list will display all of the packages installed in the virtual environment:\n(tutorial-env) $ pip list\nnovas (3.1.1.3)\nnumpy (1.9.2)\npip (7.0.3)\nrequests (2.7.0)\nsetuptools (16.0)\npip freeze will produce a similar",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "char_end": 998,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 105
+        },
+        "score": 0.34309709256222976,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "A_fixed",
+    "split": "test",
+    "id": "q18",
+    "question": "Với `range(5)`, khi chuyển kết quả thành list thì nhận được những giá trị nào?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 27,
+        "quote": "list(range(5)) [0, 1, 2, 3, 4]"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:26:fixed:845",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 26,
+        "text": "part of the generated sequence;range(10) generates 10 values, the legal indices\nfor items of a sequence of length 10. It is possible to let the range start at another number, or to specify a\ndifferent increment (even negative; sometimes this is called the ‘step’):\nrange(5, 10)\n5, 6, 7, 8, 9\nrange(0, 10, 3)\n0, 3, 6, 9\nrange(-10, -100, -30)\n-10, -40, -70\nTo iterate over the indices of a sequence, you can combinerange() and len() as follows:\n>>> a = ['Mary', 'had', 'a', 'little', 'lamb']\n>>> for i in range(len(a)):\n... print(i, a[i])\n...\n0 Mary\n1 had\n2 a\n3 little\n4 lamb\nIn most such cases, however, it is convenient to use theenumerate() function, see Looping Techniques.\nA strange thing happens if you just print a range:\n20 Chapter 4. More Control Flow Tools",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-04",
+          "version": "3.7.0",
+          "char_end": 1610,
+          "language": "en",
+          "char_start": 845,
+          "physical_page": 26
+        },
+        "score": 0.42596470100358275,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:27:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 27,
+        "text": "Python Tutorial, Release 3.7.0\n>>> print(range(10))\nrange(0, 10)\nIn many ways the object returned byrange() behaves as if it is a list, but in fact it isn’t. It is an object\nwhich returns the successive items of the desired sequence when you iterate over it, but it doesn’t really\nmake the list, thus saving space.\nWe say such an object is iterable, that is, suitable as a target for functions and constructs that expect\nsomething from which they can obtain successive items until the supply is exhausted. We have seen that\nthe for statement is such aniterator. The functionlist() is another; it creates lists from iterables:\n>>> list(range(5))\n[0, 1, 2, 3, 4]\nLater we will see more functions that return iterables and take iterables as argument.\n4.4 break and continue Statements, and else Clauses on Loops\nThe break statement, like in C, breaks out of the innermost enclosingfor or while loop.\nLoop statements may have anelse clause; it is executed when the loop terminates through exhaustion",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-04",
+          "version": "3.7.0",
+          "char_end": 995,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 27
+        },
+        "score": 0.40021957313028467,
+        "rank": 2,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:37:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 37,
+        "text": "CHAPTER\nFIVE\nDATA STRUCTURES\nThis chapter describes some things you’ve learned about already in more detail, and adds some new things\nas well.\n5.1 More on Lists\nThe list data type has some more methods. Here are all of the methods of list objects:\nlist.append(x)\nAdd an item to the end of the list. Equivalent toa[len(a):] = [x].\nlist.extend(iterable)\nExtend the list by appending all the items from the iterable. Equivalent toa[len(a):] = iterable.\nlist.insert(i, x)\nInsert an item at a given position. The first argument is the index of the element before which to\ninsert, soa.insert(0, x) inserts at the front of the list, anda.insert(len(a), x) is equivalent to\na.append(x).\nlist.remove(x)\nRemove the first item from the list whose value is equal tox. It raises aValueError if there is no such\nitem.\nlist.pop([i ])\nRemovetheitematthegivenpositioninthelist, andreturnit. Ifnoindexisspecified, a.pop()removes\nand returns the last item in the list. (The square brackets around thei in the method",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-05",
+          "version": "3.7.0",
+          "char_end": 996,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 37
+        },
+        "score": 0.3640334696679832,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "A_fixed",
+    "split": "test",
+    "id": "q19",
+    "question": "Nếu muốn giá trị mặc định của tham số danh sách không bị chia sẻ giữa các lần gọi hàm, cần viết mẫu nào?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 31,
+        "quote": "def f(a, L=None): if L is None: L = []"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:113:fixed:2525",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 113,
+        "text": "ng data with other languages that support the same format (such as\nJava and C99).\nAnother helpful tool is themath.fsum() function which helps mitigate loss-of-precision during summation.\nIt tracks “lost digits” as values are added onto a running total. That can make a difference in overall accuracy\nso that the errors do not accumulate to the point where they affect the final total:\n>>> sum([0.1] * 10) == 1.0\nFalse\n>>> math.fsum([0.1] * 10) == 1.0\nTrue\n107",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "char_end": 2984,
+          "language": "en",
+          "char_start": 2525,
+          "physical_page": 113
+        },
+        "score": 0.2910487214410644,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:16:fixed:832",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 16,
+        "text": "e), trying to use it will give you an error:\n>>> n # try to access an undefined variable\nTraceback (most recent call last):\nFile \"<stdin>\", line 1, in <module>\nNameError: name 'n' is not defined\nThere is full support for floating point; operators with mixed type operands convert the integer operand to\nfloating point:\n>>> 4 * 3.75 - 1\n14.0\nIn interactive mode, the last printed expression is assigned to the variable_. This means that when you are\nusing Python as a desk calculator, it is somewhat easier to continue calculations, for example:\n>>> tax = 12.5 / 100\n>>> price = 100.50\n>>> price * tax\n12.5625\n>>> price + _\n113.0625\n>>> round(_, 2)\n113.06\nThis variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you\nwould create an independent local variable with the same name masking the built-in variable with its magic\nbehavior.\n1 Since ** has higher precedence than -, -3**2 will be interpreted as -(3**2) and thus result in -9. To avoid this and get\n9,",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-03",
+          "version": "3.7.0",
+          "char_end": 1831,
+          "language": "en",
+          "char_start": 832,
+          "physical_page": 16
+        },
+        "score": 0.2764191490707568,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:35:fixed:849",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 35,
+        "text": "here are the\nmost important points extracted for you:\n• Use 4-space indentation, and no tabs.\n4 spaces are a good compromise between small indentation (allows greater nesting depth) and large\nindentation (easier to read). Tabs introduce confusion, and are best left out.\n• Wrap lines so that they don’t exceed 79 characters.\nThis helps users with small displays and makes it possible to have several code files side-by-side on\nlarger displays.\n• Use blank lines to separate functions and classes, and larger blocks of code inside functions.\n• When possible, put comments on a line of their own.\n• Use docstrings.\n• Use spaces around operators and after commas, but not directly inside bracketing constructs:a =\nf(1, 2) + g(3, 4).\n• Name your classes and functions consistently; the convention is to useCamelCase for classes and\nlower_case_with_underscores for functions and methods. Always useself as the name for the first\nmethod argument (seeA First Look at Classes for more on classes and",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-04",
+          "version": "3.7.0",
+          "char_end": 1840,
+          "language": "en",
+          "char_start": 849,
+          "physical_page": 35
+        },
+        "score": 0.2763716516332565,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "A_fixed",
+    "split": "test",
+    "id": "q20",
+    "question": "Trong chương về số học thập phân dấu phẩy động, kết quả so sánh tổng mười số `0.1` với `1.0` là gì khi dùng `Decimal`, và khi dùng float?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 101,
+        "quote": "sum([Decimal('0.1')]*10) == Decimal('1.0') True"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:111:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 111,
+        "text": "CHAPTER\nFIFTEEN\nFLOATING POINT ARITHMETIC: ISSUES AND LIMITATIONS\nFloating-point numbers are represented in computer hardware as base 2 (binary) fractions. For example,\nthe decimal fraction\n0.125\nhas value 1/10 + 2/100 + 5/1000, and in the same way the binary fraction\n0.001\nhas value 0/2 + 0/4 + 1/8. These two fractions have identical values, the only real difference being that the\nfirst is written in base 10 fractional notation, and the second in base 2.\nUnfortunately, most decimal fractions cannot be represented exactly as binary fractions. A consequence is\nthat, in general, the decimal floating-point numbers you enter are only approximated by the binary floating-\npoint numbers actually stored in the machine.\nThe problem is easier to understand at first in base 10. Consider the fraction 1/3. You can approximate\nthat as a base 10 fraction:\n0.3\nor, better,\n0.33\nor, better,\n0.333\nand so on. No matter how many digits you’re willing to write down, the result will never be exactly",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "char_end": 991,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 111
+        },
+        "score": 0.5113781902796729,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:101:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 101,
+        "text": "Python Tutorial, Release 3.7.0\nThe Decimal result keeps a trailing zero, automatically inferring four place significance from multiplicands\nwith two place significance. Decimal reproduces mathematics as done by hand and avoids issues that can\narise when binary floating point cannot exactly represent decimal quantities.\nExact representation enables theDecimal class to perform modulo calculations and equality tests that are\nunsuitable for binary floating point:\n>>> Decimal('1.00') % Decimal('.10')\nDecimal('0.00')\n>>> 1.00 % 0.10\n0.09999999999999995\n>>> sum([Decimal('0.1')]*10) == Decimal('1.0')\nTrue\n>>> sum([0.1]*10) == 1.0\nFalse\nThe decimal module provides arithmetic with as much precision as needed:\n>>> getcontext().prec = 36\n>>> Decimal(1) / Decimal(7)\nDecimal('0.142857142857142857142857142857142857')\n11.8. Decimal Floating Point Arithmetic 95",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-11",
+          "version": "3.7.0",
+          "char_end": 856,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 101
+        },
+        "score": 0.5079035430120877,
+        "rank": 2,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:115:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 115,
+        "text": "Python Tutorial, Release 3.7.0\nmeaning that the exact number stored in the computer is equal to the decimal value\n0.1000000000000000055511151231257827021181583404541015625. Instead of displaying the full decimal\nvalue, many languages (including older versions of Python), round the result to 17 significant digits:\n>>> format(0.1, '.17f')\n'0.10000000000000001'\nThe fractions and decimal modules make these calculations easy:\n>>> from decimal import Decimal\n>>> from fractions import Fraction\n>>> Fraction.from_float(0.1)\nFraction(3602879701896397, 36028797018963968)\n>>> (0.1).as_integer_ratio()\n(3602879701896397, 36028797018963968)\n>>> Decimal.from_float(0.1)\nDecimal('0.1000000000000000055511151231257827021181583404541015625')\n>>> format(Decimal.from_float(0.1), '.17')\n'0.10000000000000001'\n15.1. Representation Error 109",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "char_end": 826,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 115
+        },
+        "score": 0.5042246977783192,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "A_fixed",
+    "split": "test",
+    "id": "q21",
+    "question": "Vì sao Python thường hiển thị `0.1` theo dạng gọn `0.1` mặc dù giá trị lưu trữ không phải chính xác một phần mười?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 112,
+        "quote": "Python keeps the number of digits manageable by displaying a rounded value instead"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:111:fixed:1689",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 111,
+        "text": "true value of 1/10.\nMany users are not aware of the approximation because of the way values are displayed. Python only prints\na decimal approximation to the true decimal value of the binary approximation stored by the machine. On\nmost machines, if Python were to print the true decimal value of the binary approximation stored for 0.1, it\nwould have to display\n105",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "char_end": 2054,
+          "language": "en",
+          "char_start": 1689,
+          "physical_page": 111
+        },
+        "score": 0.5669099454739717,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:112:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 112,
+        "text": "Python Tutorial, Release 3.7.0\n>>> 0.1\n0.1000000000000000055511151231257827021181583404541015625\nThat is more digits than most people find useful, so Python keeps the number of digits manageable by\ndisplaying a rounded value instead\n>>> 1 / 10\n0.1\nJust remember, even though the printed result looks like the exact value of 1/10, the actual stored value is\nthe nearest representable binary fraction.\nInterestingly, there are many different decimal numbers that share the same nearest ap-\nproximate binary fraction. For example, the numbers 0.1 and 0.10000000000000001 and\n0.1000000000000000055511151231257827021181583404541015625 are all approximated by\n3602879701896397 / 2 ** 55 . Since all of these decimal values share the same approximation,\nany one of them could be displayed while still preserving the invarianteval(repr(x)) == x.\nHistorically, the Python prompt and built-in repr() function would choose the one with 17 significant\ndigits, 0.10000000000000001. Starting with Python 3.1,",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "char_end": 994,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 112
+        },
+        "score": 0.48176490926656623,
+        "rank": 2,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:115:fixed:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 115,
+        "text": "Python Tutorial, Release 3.7.0\nmeaning that the exact number stored in the computer is equal to the decimal value\n0.1000000000000000055511151231257827021181583404541015625. Instead of displaying the full decimal\nvalue, many languages (including older versions of Python), round the result to 17 significant digits:\n>>> format(0.1, '.17f')\n'0.10000000000000001'\nThe fractions and decimal modules make these calculations easy:\n>>> from decimal import Decimal\n>>> from fractions import Fraction\n>>> Fraction.from_float(0.1)\nFraction(3602879701896397, 36028797018963968)\n>>> (0.1).as_integer_ratio()\n(3602879701896397, 36028797018963968)\n>>> Decimal.from_float(0.1)\nDecimal('0.1000000000000000055511151231257827021181583404541015625')\n>>> format(Decimal.from_float(0.1), '.17')\n'0.10000000000000001'\n15.1. Representation Error 109",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "char_end": 826,
+          "language": "en",
+          "char_start": 0,
+          "physical_page": 115
+        },
+        "score": 0.48108745910986095,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "B_paragraph",
+    "split": "test",
+    "id": "q15",
+    "question": "Khi dùng `pip freeze`, tài liệu khuyên lưu kết quả theo quy ước nào và cài lại danh sách đó ra sao?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "quote": "A common convention is to put this list in a requirements.txt file"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:105:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "text": "\n(tutorial-env) $ cat requirements.txt\nnovas==3.1.1.3\nnumpy==1.9.2\nrequests==2.7.0\nThe requirements.txt can then be committed to version control and shipped as part of an application.\nUsers can then install all the necessary packages withinstall -r:\n(tutorial-env) $ pip install -r requirements.txt\nCollecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n...\nCollecting numpy==1.9.2 (from -r requirements.txt (line 2))\n...\nCollecting requests==2.7.0 (from -r requirements.txt (line 3))\n...\nInstalling collected packages: novas, numpy, requests\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0\n12.3. Managing Packages with pip 99",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 105
+        },
+        "score": 0.3849457993096195,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:105:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "text": "Python Tutorial, Release 3.7.0\n(tutorial-env) $ pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\npip uninstall followed by one or more package names will remove the packages from the virtual environ-\nment.\npip show will display information about a particular package:\n(tutorial-env) $ pip show requests\n---\nMetadata-Version: 2.0\nName: requests\nVersion: 2.7.0\nSummary: Python HTTP for Humans.\nHome-page: http://python-requests.org\nAuthor: Kenneth Reitz\nAuthor-email: me@kennethreitz.com\nLicense: Apache 2.0\nLocation: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\nRequires:\npip list will display all of the packages installed in the virtual environment:\n(tutorial-env) $ pip list\nnovas (3.1.1.3)\nnumpy (1.9.2)\npip (7.0.3)\nrequests (2.7.0)\nsetuptools (16.0)\npip freeze will produce a similar list of the installed packages, but the output uses the format thatpip\ninstall expects. A common convention is to put this list in arequirements.txt file:\n(tutorial-env) $ pip freeze > requirements.txt",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 105
+        },
+        "score": 0.3630367644862733,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:106:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 106,
+        "text": "Python Tutorial, Release 3.7.0\npip has many more options. Consult the installing-index guide for complete documentation forpip. When\nyou’vewrittenapackageandwanttomakeitavailableonthePythonPackageIndex, consultthedistributing-\nindex guide.\n100 Chapter 12. Virtual Environments and Packages",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 106
+        },
+        "score": 0.35299956049954895,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "B_paragraph",
+    "split": "test",
+    "id": "q18",
+    "question": "Với `range(5)`, khi chuyển kết quả thành list thì nhận được những giá trị nào?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 27,
+        "quote": "list(range(5)) [0, 1, 2, 3, 4]"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:27:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 27,
+        "text": "Python Tutorial, Release 3.7.0\n>>> print(range(10))\nrange(0, 10)\nIn many ways the object returned byrange() behaves as if it is a list, but in fact it isn’t. It is an object\nwhich returns the successive items of the desired sequence when you iterate over it, but it doesn’t really\nmake the list, thus saving space.\nWe say such an object is iterable, that is, suitable as a target for functions and constructs that expect\nsomething from which they can obtain successive items until the supply is exhausted. We have seen that\nthe for statement is such aniterator. The functionlist() is another; it creates lists from iterables:\n>>> list(range(5))\n[0, 1, 2, 3, 4]\nLater we will see more functions that return iterables and take iterables as argument.\n4.4 break and continue Statements, and else Clauses on Loops\nThe break statement, like in C, breaks out of the innermost enclosingfor or while loop.\nLoop statements may have anelse clause; it is executed when the loop terminates through exhaustion of\nthe list (withfor) or when the condition becomes false (withwhile), but not when the loop is terminated\nby abreak statement. This is exemplified by the following loop, which searches for prime numbers:",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-04",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 27
+        },
+        "score": 0.3951672395163143,
+        "rank": 1,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:37:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 37,
+        "text": "CHAPTER\nFIVE\nDATA STRUCTURES\nThis chapter describes some things you’ve learned about already in more detail, and adds some new things\nas well.\n5.1 More on Lists\nThe list data type has some more methods. Here are all of the methods of list objects:\nlist.append(x)\nAdd an item to the end of the list. Equivalent toa[len(a):] = [x].\nlist.extend(iterable)\nExtend the list by appending all the items from the iterable. Equivalent toa[len(a):] = iterable.\nlist.insert(i, x)\nInsert an item at a given position. The first argument is the index of the element before which to\ninsert, soa.insert(0, x) inserts at the front of the list, anda.insert(len(a), x) is equivalent to\na.append(x).\nlist.remove(x)\nRemove the first item from the list whose value is equal tox. It raises aValueError if there is no such\nitem.\nlist.pop([i ])\nRemovetheitematthegivenpositioninthelist, andreturnit. Ifnoindexisspecified, a.pop()removes\nand returns the last item in the list. (The square brackets around thei in the method signature denote\nthat the parameter is optional, not that you should type square brackets at that position. You will see\nthis notation frequently in the Python Library Reference.)\nlist.clear()\nRemove all",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-05",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 37
+        },
+        "score": 0.3621141537553503,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:21:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 21,
+        "text": "ers[2:5] = ['C', 'D', 'E']\n>>> letters\n['a', 'b', 'C', 'D', 'E', 'f', 'g']\n>>> # now remove them\n>>> letters[2:5] = []\n>>> letters\n['a', 'b', 'f', 'g']\n>>> # clear the list by replacing all the elements with an empty list\n>>> letters[:] = []\n>>> letters\n[]\nThe built-in functionlen() also applies to lists:\n>>> letters = ['a', 'b', 'c', 'd']\n>>> len(letters)\n4\nIt is possible to nest lists (create lists containing other lists), for example:\n3.1. Using Python as a Calculator 15",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-03",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 21
+        },
+        "score": 0.35870627007949296,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "B_paragraph",
+    "split": "test",
+    "id": "q19",
+    "question": "Nếu muốn giá trị mặc định của tham số danh sách không bị chia sẻ giữa các lần gọi hàm, cần viết mẫu nào?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 31,
+        "quote": "def f(a, L=None): if L is None: L = []"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:42:paragraph:2",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 42,
+        "text": "continues on next page)\n36 Chapter 5. Data Structures",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-05",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 2,
+          "physical_page": 42
+        },
+        "score": 0.298205157900432,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:59:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 59,
+        "text": "rmatting directives, but you’ll also need\nto provide the information to be formatted.\n>>> yes_votes = 42_572_654 ; no_votes = 43_132_495\n>>> percentage = yes_votes/(yes_votes+no_votes)\n>>> '{:-9} YES votes {:2.2%}'.format(yes_votes, percentage)\n' 42572654 YES votes 49.67%'\n• Finally, you can do all the string handling yourself by using string slicing and concatenation operations\nto create any layout you can imagine. The string type has some methods that perform useful operations\nfor padding strings to a given column width.\nWhen you don’t need fancy output but just want a quick display of some variables for debugging purposes,\nyou can convert any value to a string with therepr() or str() functions.\nThe str() function is meant to return representations of values which are fairly human-readable, while\nrepr()is meant to generate representations which can be read by the interpreter(or will force aSyntaxError\nif there is no equivalent syntax). For objects which don’t have a particular representation for human con-\nsumption, str() will return the same value asrepr(). Many values, such as numbers or structures like lists\nand dictionaries, have the same representation using either function.",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-07",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 59
+        },
+        "score": 0.2762748668870857,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:16:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 16,
+        "text": "st printed expression is assigned to the variable_. This means that when you are\nusing Python as a desk calculator, it is somewhat easier to continue calculations, for example:\n>>> tax = 12.5 / 100\n>>> price = 100.50\n>>> price * tax\n12.5625\n>>> price + _\n113.0625\n>>> round(_, 2)\n113.06\nThis variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you\nwould create an independent local variable with the same name masking the built-in variable with its magic\nbehavior.\n1 Since ** has higher precedence than -, -3**2 will be interpreted as -(3**2) and thus result in -9. To avoid this and get\n9, you can use (-3)**2.\n10 Chapter 3. An Informal Introduction to Python",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-03",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 16
+        },
+        "score": 0.27434649544271283,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "B_paragraph",
+    "split": "test",
+    "id": "q20",
+    "question": "Trong chương về số học thập phân dấu phẩy động, kết quả so sánh tổng mười số `0.1` với `1.0` là gì khi dùng `Decimal`, và khi dùng float?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 101,
+        "quote": "sum([Decimal('0.1')]*10) == Decimal('1.0') True"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:111:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 111,
+        "text": "CHAPTER\nFIFTEEN\nFLOATING POINT ARITHMETIC: ISSUES AND LIMITATIONS\nFloating-point numbers are represented in computer hardware as base 2 (binary) fractions. For example,\nthe decimal fraction\n0.125\nhas value 1/10 + 2/100 + 5/1000, and in the same way the binary fraction\n0.001\nhas value 0/2 + 0/4 + 1/8. These two fractions have identical values, the only real difference being that the\nfirst is written in base 10 fractional notation, and the second in base 2.\nUnfortunately, most decimal fractions cannot be represented exactly as binary fractions. A consequence is\nthat, in general, the decimal floating-point numbers you enter are only approximated by the binary floating-\npoint numbers actually stored in the machine.\nThe problem is easier to understand at first in base 10. Consider the fraction 1/3. You can approximate\nthat as a base 10 fraction:\n0.3\nor, better,\n0.33\nor, better,\n0.333\nand so on. No matter how many digits you’re willing to write down, the result will never be exactly 1/3,\nbut will be an increasingly better approximation of 1/3.\nIn the same way, no matter how many base 2 digits you’re willing to use, the decimal value 0.1 cannot be\nrepresented exactly as a base 2 fraction.",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 111
+        },
+        "score": 0.5176582345296358,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:101:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 101,
+        "text": "Python Tutorial, Release 3.7.0\nThe Decimal result keeps a trailing zero, automatically inferring four place significance from multiplicands\nwith two place significance. Decimal reproduces mathematics as done by hand and avoids issues that can\narise when binary floating point cannot exactly represent decimal quantities.\nExact representation enables theDecimal class to perform modulo calculations and equality tests that are\nunsuitable for binary floating point:\n>>> Decimal('1.00') % Decimal('.10')\nDecimal('0.00')\n>>> 1.00 % 0.10\n0.09999999999999995\n>>> sum([Decimal('0.1')]*10) == Decimal('1.0')\nTrue\n>>> sum([0.1]*10) == 1.0\nFalse\nThe decimal module provides arithmetic with as much precision as needed:\n>>> getcontext().prec = 36\n>>> Decimal(1) / Decimal(7)\nDecimal('0.142857142857142857142857142857142857')\n11.8. Decimal Floating Point Arithmetic 95",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-11",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 101
+        },
+        "score": 0.5079192172547424,
+        "rank": 2,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:115:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 115,
+        "text": "Python Tutorial, Release 3.7.0\nmeaning that the exact number stored in the computer is equal to the decimal value\n0.1000000000000000055511151231257827021181583404541015625. Instead of displaying the full decimal\nvalue, many languages (including older versions of Python), round the result to 17 significant digits:\n>>> format(0.1, '.17f')\n'0.10000000000000001'\nThe fractions and decimal modules make these calculations easy:\n>>> from decimal import Decimal\n>>> from fractions import Fraction\n>>> Fraction.from_float(0.1)\nFraction(3602879701896397, 36028797018963968)\n>>> (0.1).as_integer_ratio()\n(3602879701896397, 36028797018963968)\n>>> Decimal.from_float(0.1)\nDecimal('0.1000000000000000055511151231257827021181583404541015625')\n>>> format(Decimal.from_float(0.1), '.17')\n'0.10000000000000001'\n15.1. Representation Error 109",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 115
+        },
+        "score": 0.5042246977783192,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "B_paragraph",
+    "split": "test",
+    "id": "q21",
+    "question": "Vì sao Python thường hiển thị `0.1` theo dạng gọn `0.1` mặc dù giá trị lưu trữ không phải chính xác một phần mười?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 112,
+        "quote": "Python keeps the number of digits manageable by displaying a rounded value instead"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:112:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 112,
+        "text": "Python Tutorial, Release 3.7.0\n>>> 0.1\n0.1000000000000000055511151231257827021181583404541015625\nThat is more digits than most people find useful, so Python keeps the number of digits manageable by\ndisplaying a rounded value instead\n>>> 1 / 10\n0.1\nJust remember, even though the printed result looks like the exact value of 1/10, the actual stored value is\nthe nearest representable binary fraction.\nInterestingly, there are many different decimal numbers that share the same nearest ap-\nproximate binary fraction. For example, the numbers 0.1 and 0.10000000000000001 and\n0.1000000000000000055511151231257827021181583404541015625 are all approximated by\n3602879701896397 / 2 ** 55 . Since all of these decimal values share the same approximation,\nany one of them could be displayed while still preserving the invarianteval(repr(x)) == x.\nHistorically, the Python prompt and built-in repr() function would choose the one with 17 significant\ndigits, 0.10000000000000001. Starting with Python 3.1, Python (on most systems) is now able to choose\nthe shortest of these and simply display0.1.\nNote that this is in the very nature of binary floating-point: this is not a bug in Python, and it is not a\nbug i",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 112
+        },
+        "score": 0.5094647073746337,
+        "rank": 1,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:111:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 111,
+        "text": " In base 2, 1/10 is the infinitely repeating fraction\n0.0001100110011001100110011001100110011001100110011...\nStop at any finite number of bits, and you get an approximation. On most machines today, floats are\napproximated using a binary fraction with the numerator using the first 53 bits starting with the most\nsignificant bit and with the denominator as a power of two. In the case of 1/10, the binary fraction is\n3602879701896397 / 2 ** 55 which is close to but not exactly equal to the true value of 1/10.\nMany users are not aware of the approximation because of the way values are displayed. Python only prints\na decimal approximation to the true decimal value of the binary approximation stored by the machine. On\nmost machines, if Python were to print the true decimal value of the binary approximation stored for 0.1, it\nwould have to display\n105",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 111
+        },
+        "score": 0.48763696535087875,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:115:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 115,
+        "text": "Python Tutorial, Release 3.7.0\nmeaning that the exact number stored in the computer is equal to the decimal value\n0.1000000000000000055511151231257827021181583404541015625. Instead of displaying the full decimal\nvalue, many languages (including older versions of Python), round the result to 17 significant digits:\n>>> format(0.1, '.17f')\n'0.10000000000000001'\nThe fractions and decimal modules make these calculations easy:\n>>> from decimal import Decimal\n>>> from fractions import Fraction\n>>> Fraction.from_float(0.1)\nFraction(3602879701896397, 36028797018963968)\n>>> (0.1).as_integer_ratio()\n(3602879701896397, 36028797018963968)\n>>> Decimal.from_float(0.1)\nDecimal('0.1000000000000000055511151231257827021181583404541015625')\n>>> format(Decimal.from_float(0.1), '.17')\n'0.10000000000000001'\n15.1. Representation Error 109",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 115
+        },
+        "score": 0.48108745910986095,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "C_paragraph_filter",
+    "split": "test",
+    "id": "q15",
+    "question": "Khi dùng `pip freeze`, tài liệu khuyên lưu kết quả theo quy ước nào và cài lại danh sách đó ra sao?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "quote": "A common convention is to put this list in a requirements.txt file"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:105:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "text": "\n(tutorial-env) $ cat requirements.txt\nnovas==3.1.1.3\nnumpy==1.9.2\nrequests==2.7.0\nThe requirements.txt can then be committed to version control and shipped as part of an application.\nUsers can then install all the necessary packages withinstall -r:\n(tutorial-env) $ pip install -r requirements.txt\nCollecting novas==3.1.1.3 (from -r requirements.txt (line 1))\n...\nCollecting numpy==1.9.2 (from -r requirements.txt (line 2))\n...\nCollecting requests==2.7.0 (from -r requirements.txt (line 3))\n...\nInstalling collected packages: novas, numpy, requests\nRunning setup.py install for novas\nSuccessfully installed novas-3.1.1.3 numpy-1.9.2 requests-2.7.0\n12.3. Managing Packages with pip 99",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 105
+        },
+        "score": 0.3849457993096195,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:105:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 105,
+        "text": "Python Tutorial, Release 3.7.0\n(tutorial-env) $ pip install --upgrade requests\nCollecting requests\nInstalling collected packages: requests\nFound existing installation: requests 2.6.0\nUninstalling requests-2.6.0:\nSuccessfully uninstalled requests-2.6.0\nSuccessfully installed requests-2.7.0\npip uninstall followed by one or more package names will remove the packages from the virtual environ-\nment.\npip show will display information about a particular package:\n(tutorial-env) $ pip show requests\n---\nMetadata-Version: 2.0\nName: requests\nVersion: 2.7.0\nSummary: Python HTTP for Humans.\nHome-page: http://python-requests.org\nAuthor: Kenneth Reitz\nAuthor-email: me@kennethreitz.com\nLicense: Apache 2.0\nLocation: /Users/akuchling/envs/tutorial-env/lib/python3.4/site-packages\nRequires:\npip list will display all of the packages installed in the virtual environment:\n(tutorial-env) $ pip list\nnovas (3.1.1.3)\nnumpy (1.9.2)\npip (7.0.3)\nrequests (2.7.0)\nsetuptools (16.0)\npip freeze will produce a similar list of the installed packages, but the output uses the format thatpip\ninstall expects. A common convention is to put this list in arequirements.txt file:\n(tutorial-env) $ pip freeze > requirements.txt",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 105
+        },
+        "score": 0.3630367644862733,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:106:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 106,
+        "text": "Python Tutorial, Release 3.7.0\npip has many more options. Consult the installing-index guide for complete documentation forpip. When\nyou’vewrittenapackageandwanttomakeitavailableonthePythonPackageIndex, consultthedistributing-\nindex guide.\n100 Chapter 12. Virtual Environments and Packages",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-12",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 106
+        },
+        "score": 0.35299956049954895,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "C_paragraph_filter",
+    "split": "test",
+    "id": "q18",
+    "question": "Với `range(5)`, khi chuyển kết quả thành list thì nhận được những giá trị nào?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 27,
+        "quote": "list(range(5)) [0, 1, 2, 3, 4]"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:27:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 27,
+        "text": "Python Tutorial, Release 3.7.0\n>>> print(range(10))\nrange(0, 10)\nIn many ways the object returned byrange() behaves as if it is a list, but in fact it isn’t. It is an object\nwhich returns the successive items of the desired sequence when you iterate over it, but it doesn’t really\nmake the list, thus saving space.\nWe say such an object is iterable, that is, suitable as a target for functions and constructs that expect\nsomething from which they can obtain successive items until the supply is exhausted. We have seen that\nthe for statement is such aniterator. The functionlist() is another; it creates lists from iterables:\n>>> list(range(5))\n[0, 1, 2, 3, 4]\nLater we will see more functions that return iterables and take iterables as argument.\n4.4 break and continue Statements, and else Clauses on Loops\nThe break statement, like in C, breaks out of the innermost enclosingfor or while loop.\nLoop statements may have anelse clause; it is executed when the loop terminates through exhaustion of\nthe list (withfor) or when the condition becomes false (withwhile), but not when the loop is terminated\nby abreak statement. This is exemplified by the following loop, which searches for prime numbers:",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-04",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 27
+        },
+        "score": 0.3951672395163143,
+        "rank": 1,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:37:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 37,
+        "text": "CHAPTER\nFIVE\nDATA STRUCTURES\nThis chapter describes some things you’ve learned about already in more detail, and adds some new things\nas well.\n5.1 More on Lists\nThe list data type has some more methods. Here are all of the methods of list objects:\nlist.append(x)\nAdd an item to the end of the list. Equivalent toa[len(a):] = [x].\nlist.extend(iterable)\nExtend the list by appending all the items from the iterable. Equivalent toa[len(a):] = iterable.\nlist.insert(i, x)\nInsert an item at a given position. The first argument is the index of the element before which to\ninsert, soa.insert(0, x) inserts at the front of the list, anda.insert(len(a), x) is equivalent to\na.append(x).\nlist.remove(x)\nRemove the first item from the list whose value is equal tox. It raises aValueError if there is no such\nitem.\nlist.pop([i ])\nRemovetheitematthegivenpositioninthelist, andreturnit. Ifnoindexisspecified, a.pop()removes\nand returns the last item in the list. (The square brackets around thei in the method signature denote\nthat the parameter is optional, not that you should type square brackets at that position. You will see\nthis notation frequently in the Python Library Reference.)\nlist.clear()\nRemove all",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-05",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 37
+        },
+        "score": 0.3621141537553503,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:21:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 21,
+        "text": "ers[2:5] = ['C', 'D', 'E']\n>>> letters\n['a', 'b', 'C', 'D', 'E', 'f', 'g']\n>>> # now remove them\n>>> letters[2:5] = []\n>>> letters\n['a', 'b', 'f', 'g']\n>>> # clear the list by replacing all the elements with an empty list\n>>> letters[:] = []\n>>> letters\n[]\nThe built-in functionlen() also applies to lists:\n>>> letters = ['a', 'b', 'c', 'd']\n>>> len(letters)\n4\nIt is possible to nest lists (create lists containing other lists), for example:\n3.1. Using Python as a Calculator 15",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-03",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 21
+        },
+        "score": 0.35870627007949296,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "C_paragraph_filter",
+    "split": "test",
+    "id": "q19",
+    "question": "Nếu muốn giá trị mặc định của tham số danh sách không bị chia sẻ giữa các lần gọi hàm, cần viết mẫu nào?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 31,
+        "quote": "def f(a, L=None): if L is None: L = []"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:42:paragraph:2",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 42,
+        "text": "continues on next page)\n36 Chapter 5. Data Structures",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-05",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 2,
+          "physical_page": 42
+        },
+        "score": 0.298205157900432,
+        "rank": 1,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:59:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 59,
+        "text": "rmatting directives, but you’ll also need\nto provide the information to be formatted.\n>>> yes_votes = 42_572_654 ; no_votes = 43_132_495\n>>> percentage = yes_votes/(yes_votes+no_votes)\n>>> '{:-9} YES votes {:2.2%}'.format(yes_votes, percentage)\n' 42572654 YES votes 49.67%'\n• Finally, you can do all the string handling yourself by using string slicing and concatenation operations\nto create any layout you can imagine. The string type has some methods that perform useful operations\nfor padding strings to a given column width.\nWhen you don’t need fancy output but just want a quick display of some variables for debugging purposes,\nyou can convert any value to a string with therepr() or str() functions.\nThe str() function is meant to return representations of values which are fairly human-readable, while\nrepr()is meant to generate representations which can be read by the interpreter(or will force aSyntaxError\nif there is no equivalent syntax). For objects which don’t have a particular representation for human con-\nsumption, str() will return the same value asrepr(). Many values, such as numbers or structures like lists\nand dictionaries, have the same representation using either function.",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-07",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 59
+        },
+        "score": 0.2762748668870857,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:16:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 16,
+        "text": "st printed expression is assigned to the variable_. This means that when you are\nusing Python as a desk calculator, it is somewhat easier to continue calculations, for example:\n>>> tax = 12.5 / 100\n>>> price = 100.50\n>>> price * tax\n12.5625\n>>> price + _\n113.0625\n>>> round(_, 2)\n113.06\nThis variable should be treated as read-only by the user. Don’t explicitly assign a value to it — you\nwould create an independent local variable with the same name masking the built-in variable with its magic\nbehavior.\n1 Since ** has higher precedence than -, -3**2 will be interpreted as -(3**2) and thus result in -9. To avoid this and get\n9, you can use (-3)**2.\n10 Chapter 3. An Informal Introduction to Python",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-03",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 16
+        },
+        "score": 0.27434649544271283,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "C_paragraph_filter",
+    "split": "test",
+    "id": "q20",
+    "question": "Trong chương về số học thập phân dấu phẩy động, kết quả so sánh tổng mười số `0.1` với `1.0` là gì khi dùng `Decimal`, và khi dùng float?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 101,
+        "quote": "sum([Decimal('0.1')]*10) == Decimal('1.0') True"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:101:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 101,
+        "text": "Python Tutorial, Release 3.7.0\nThe Decimal result keeps a trailing zero, automatically inferring four place significance from multiplicands\nwith two place significance. Decimal reproduces mathematics as done by hand and avoids issues that can\narise when binary floating point cannot exactly represent decimal quantities.\nExact representation enables theDecimal class to perform modulo calculations and equality tests that are\nunsuitable for binary floating point:\n>>> Decimal('1.00') % Decimal('.10')\nDecimal('0.00')\n>>> 1.00 % 0.10\n0.09999999999999995\n>>> sum([Decimal('0.1')]*10) == Decimal('1.0')\nTrue\n>>> sum([0.1]*10) == 1.0\nFalse\nThe decimal module provides arithmetic with as much precision as needed:\n>>> getcontext().prec = 36\n>>> Decimal(1) / Decimal(7)\nDecimal('0.142857142857142857142857142857142857')\n11.8. Decimal Floating Point Arithmetic 95",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-11",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 101
+        },
+        "score": 0.5079192172547424,
+        "rank": 1,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:100:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 100,
+        "text": "n range(3)] # fetch the three smallest entries\n[-5, 0, 1]\n11.8 Decimal Floating Point Arithmetic\nThe decimal module offers a Decimal datatype for decimal floating point arithmetic. Compared to the\nbuilt-in float implementation of binary floating point, the class is especially helpful for\n• financial applications and other uses which require exact decimal representation,\n• control over precision,\n• control over rounding to meet legal or regulatory requirements,\n• tracking of significant decimal places, or\n• applications where the user expects the results to match calculations done by hand.\nFor example, calculating a 5% tax on a 70 cent phone charge gives different results in decimal floating point\nand binary floating point. The difference becomes significant if the results are rounded to the nearest cent:\n>>> from decimal import *\n>>> round(Decimal('0.70') * Decimal('1.05'), 2)\nDecimal('0.74')\n>>> round(.70 * 1.05, 2)\n0.73\n94 Chapter 11. Brief Tour of the Standard Library — Part II",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-11",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 100
+        },
+        "score": 0.45852922061453627,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:96:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 96,
+        "text": "Python Tutorial, Release 3.7.0\n>>> import locale\n>>> locale.setlocale(locale.LC_ALL, 'English_United States.1252')\n'English_United States.1252'\n>>> conv = locale.localeconv() # get a mapping of conventions\n>>> x = 1234567.8\n>>> locale.format(\"%d\", x, grouping=True)\n'1,234,567'\n>>> locale.format_string(\"%s%.*f\", (conv['currency_symbol'],\n... conv['frac_digits'], x), grouping=True)\n'$1,234,567.80'\n11.2 Templating\nThe string module includes a versatile Template class with a simplified syntax suitable for editing by\nend-users. This allows users to customize their applications without having to alter the application.\nThe format uses placeholder names formed by$ with valid Python identifiers (alphanumeric characters and\nunderscores). Surrounding the placeholder with braces allows it to be followed by more alphanumeric letters\nwith no intervening spaces. Writing$$ creates a single escaped$:\n>>> from string import Template\n>>> t = Template('${village}folk send $$10 to $cause.')\n>>> t.substitute(village='Nottingham', cause='the ditch fund')\n'Nottinghamfolk send $10 to the ditch fund.'\nThe substitute() method raises a KeyError when a placeholder is not supplied in a dictionary or a\nkeyword a",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-11",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 96
+        },
+        "score": 0.2023418608755364,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  },
+  {
+    "strategy": "C_paragraph_filter",
+    "split": "test",
+    "id": "q21",
+    "question": "Vì sao Python thường hiển thị `0.1` theo dạng gọn `0.1` mặc dù giá trị lưu trữ không phải chính xác một phần mười?",
+    "gold": [
+      {
+        "source": "python-tutorial-3-7-0",
+        "page": 112,
+        "quote": "Python keeps the number of digits manageable by displaying a rounded value instead"
+      }
+    ],
+    "hits": [
+      {
+        "chunk_id": "python-tutorial-3-7-0:112:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 112,
+        "text": "Python Tutorial, Release 3.7.0\n>>> 0.1\n0.1000000000000000055511151231257827021181583404541015625\nThat is more digits than most people find useful, so Python keeps the number of digits manageable by\ndisplaying a rounded value instead\n>>> 1 / 10\n0.1\nJust remember, even though the printed result looks like the exact value of 1/10, the actual stored value is\nthe nearest representable binary fraction.\nInterestingly, there are many different decimal numbers that share the same nearest ap-\nproximate binary fraction. For example, the numbers 0.1 and 0.10000000000000001 and\n0.1000000000000000055511151231257827021181583404541015625 are all approximated by\n3602879701896397 / 2 ** 55 . Since all of these decimal values share the same approximation,\nany one of them could be displayed while still preserving the invarianteval(repr(x)) == x.\nHistorically, the Python prompt and built-in repr() function would choose the one with 17 significant\ndigits, 0.10000000000000001. Starting with Python 3.1, Python (on most systems) is now able to choose\nthe shortest of these and simply display0.1.\nNote that this is in the very nature of binary floating-point: this is not a bug in Python, and it is not a\nbug i",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 112
+        },
+        "score": 0.5094647073746337,
+        "rank": 1,
+        "gold_match": true
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:111:paragraph:1",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 111,
+        "text": " In base 2, 1/10 is the infinitely repeating fraction\n0.0001100110011001100110011001100110011001100110011...\nStop at any finite number of bits, and you get an approximation. On most machines today, floats are\napproximated using a binary fraction with the numerator using the first 53 bits starting with the most\nsignificant bit and with the denominator as a power of two. In the case of 1/10, the binary fraction is\n3602879701896397 / 2 ** 55 which is close to but not exactly equal to the true value of 1/10.\nMany users are not aware of the approximation because of the way values are displayed. Python only prints\na decimal approximation to the true decimal value of the binary approximation stored by the machine. On\nmost machines, if Python were to print the true decimal value of the binary approximation stored for 0.1, it\nwould have to display\n105",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 1,
+          "physical_page": 111
+        },
+        "score": 0.48763696535087875,
+        "rank": 2,
+        "gold_match": false
+      },
+      {
+        "chunk_id": "python-tutorial-3-7-0:115:paragraph:0",
+        "document_id": "python-tutorial-3-7-0",
+        "source": "python-tutorial-3-7-0",
+        "page": 115,
+        "text": "Python Tutorial, Release 3.7.0\nmeaning that the exact number stored in the computer is equal to the decimal value\n0.1000000000000000055511151231257827021181583404541015625. Instead of displaying the full decimal\nvalue, many languages (including older versions of Python), round the result to 17 significant digits:\n>>> format(0.1, '.17f')\n'0.10000000000000001'\nThe fractions and decimal modules make these calculations easy:\n>>> from decimal import Decimal\n>>> from fractions import Fraction\n>>> Fraction.from_float(0.1)\nFraction(3602879701896397, 36028797018963968)\n>>> (0.1).as_integer_ratio()\n(3602879701896397, 36028797018963968)\n>>> Decimal.from_float(0.1)\nDecimal('0.1000000000000000055511151231257827021181583404541015625')\n>>> format(Decimal.from_float(0.1), '.17')\n'0.10000000000000001'\n15.1. Representation Error 109",
+        "metadata": {
+          "empty": false,
+          "title": "Python Tutorial",
+          "section": "chapter-15",
+          "version": "3.7.0",
+          "chunking": "paragraph",
+          "language": "en",
+          "chunk_index": 0,
+          "physical_page": 115
+        },
+        "score": 0.48108745910986095,
+        "rank": 3,
+        "gold_match": false
+      }
+    ]
+  }
+]

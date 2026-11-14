@@ -1,0 +1,20 @@
+{
+  "A_fixed": {
+    "chunk_count": 270,
+    "embedding_seconds": 6.293,
+    "model": "text-embedding-3-small",
+    "dimensions": 1536
+  },
+  "B_paragraph": {
+    "chunk_count": 218,
+    "embedding_seconds": 3.244,
+    "model": "text-embedding-3-small",
+    "dimensions": 1536
+  },
+  "C_paragraph_filter": {
+    "chunk_count": 218,
+    "embedding_seconds": 0.0,
+    "model": "text-embedding-3-small",
+    "dimensions": 1536
+  }
+}
